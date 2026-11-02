@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Elsie Silver Reader's Guide</title>
+<meta name="description" content="A spoiler-safe fan companion to Elsie Silver's connected small-town romance universe: Gold Rush Ranch, Chestnut Springs, Rose Hill and Emerald Lake. Books, characters, towns, timeline, recaps, family trees and connections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky command bar (title + global search + tabs) over a single content column; cards in auto-fill grids.
+   Theme: Flawless. Alberta prairie by day (wheat-pale paper, steely-blue truck paint, denim), a midnight-denim sky
+   with freckle-constellation stars after dark; championship-buckle gold and a blush accent. */
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f1efe8; --surface:#fbfaf6; --sunk:#e4e3da; --fg:#1c2530; --muted:#59636e; --line:#d3d4cb;
+  --accent:#35546e; --accent-ink:#ffffff; --bronze:#b0566a; --gold:#9a7420;
+  --good:#3d7a4f; --grey:#8a6513; --bad:#a3322b;
+  --fam:#9a7420; --love:#b8436b; --friend:#3d7a4f; --foe:#a3322b; --bond:#35546e; --ally:#5d7fa3;
+  --display:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --body:"Karla", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --r:8px; --stars:none;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e141c; --surface:#162029; --sunk:#202c38; --fg:#ebeee9; --muted:#9fabb6; --line:#2c3a47;
+  --accent:#9cc0dc; --accent-ink:#0e141c; --bronze:#eda3b4; --gold:#e3c27a;
+  --good:#7cc596; --grey:#e3b552; --bad:#f07c74;
+  --fam:#e3c27a; --love:#f08fb2; --friend:#7cc596; --foe:#f07c74; --bond:#9cc0dc; --ally:#a8b8e8;
+  --stars:radial-gradient(1px 1px at 12% 22%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 68% 38%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 84% 12%,#fff9 50%,transparent 51%),radial-gradient(1px 1px at 33% 72%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 92% 64%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 47% 8%,#fff7 50%,transparent 51%);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e141c; --surface:#162029; --sunk:#202c38; --fg:#ebeee9; --muted:#9fabb6; --line:#2c3a47;
+  --accent:#9cc0dc; --accent-ink:#0e141c; --bronze:#eda3b4; --gold:#e3c27a;
+  --good:#7cc596; --grey:#e3b552; --bad:#f07c74;
+  --fam:#e3c27a; --love:#f08fb2; --friend:#7cc596; --foe:#f07c74; --bond:#9cc0dc; --ally:#a8b8e8;
+  --stars:radial-gradient(1px 1px at 12% 22%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 68% 38%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 84% 12%,#fff9 50%,transparent 51%),radial-gradient(1px 1px at 33% 72%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 92% 64%,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 47% 8%,#fff7 50%,transparent 51%);
+  color-scheme:dark}
+/* ---- codex-specific additions ---- */
+.trope{margin:4px 0 0;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--bronze)}
+.town h3{font-size:1.25rem}
+ul.lm{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:5px;font-size:.92rem}
+ul.lm li{padding-left:14px;position:relative}
+ul.lm li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.spd .opt-h{margin:10px 0 2px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze)}
+.spd .opt-h:first-child{margin-top:0}
+.rc-chips{display:grid;gap:8px;margin-bottom:16px}
+.rc-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.rc-s{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:150px}
+.xover{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.xover .era h3{font-size:1rem}
+header.bar .brand h1{font-weight:400;letter-spacing:.01em}
+.brand h1 .pre{font-style:italic;color:var(--muted);font-size:.8em}
+.brand h1 .thorn{font-style:italic}
+h2,h3{font-weight:400}
+header.bar{border-bottom:3px double var(--line)}
+@media (max-width:700px){.rc-s{min-width:100%}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5}
+img{max-width:100%}
+[hidden]{display:none!important}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--stars),var(--surface);border-bottom:1px solid var(--line)}
+.bar .wrap{padding-block:12px 0;display:grid;gap:10px}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.brand h1{font-family:var(--display);font-weight:500;font-size:clamp(1.35rem,3.6vw,1.85rem);margin:0;letter-spacing:.06em;line-height:1.1}
+.brand h1 .thorn{color:var(--bronze)}
+.brand small{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.gsearch{position:relative}
+.gsearch input{width:100%;font:inherit;padding:10px 12px 10px 36px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);color:var(--fg)}
+.gsearch svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted)}
+.gres{position:absolute;left:0;right:0;top:calc(100% + 4px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);max-height:60vh;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:40}
+.gres button{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;padding:9px 12px;border:0;background:none;color:var(--fg);font:inherit;cursor:pointer;border-bottom:1px solid var(--line)}
+.gres button:hover,.gres button:focus-visible{background:var(--sunk);outline:none}
+.gres .k{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--bronze);min-width:74px}
+.gres .s{color:var(--muted);font-size:.86rem}
+nav.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{font:inherit;font-weight:500;border:0;background:none;color:var(--muted);padding:10px 12px;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+nav.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+main .wrap{padding-block:22px 60px}
+h2{font-family:var(--display);font-weight:500;font-size:1.6rem;margin:0 0 4px;letter-spacing:.03em;text-wrap:balance}
+h3{font-family:var(--display);font-weight:500;font-size:1.18rem;margin:0;letter-spacing:.02em;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 18px;max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze);margin:0}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.controls input[type=search],.controls select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--fg);min-width:0}
+.controls input[type=search]{flex:1 1 220px}
+.chip{font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip:focus-visible,.card:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.count{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;align-items:start}
+.grid.wide{grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
+.group-h{display:flex;align-items:baseline;gap:10px;margin:26px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.group-h:first-child{margin-top:0}
+.group-h span{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0;scroll-margin-top:180px;transition:box-shadow .3s}
+.card.flash{box-shadow:0 0 0 3px var(--accent)}
+.card-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:8px}
+.card .aka{color:var(--muted);font-size:.88rem;font-style:italic}
+dl.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:10px 0 0;font-size:.93rem}
+dl.kv dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+dl.kv dd{margin:0;min-width:0}
+.pill{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.p-good{color:var(--good)} .p-grey{color:var(--grey)} .p-bad{color:var(--bad)}
+.p-dead{color:var(--muted)} .p-mark{color:var(--gold)}
+.pills{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.death{margin-top:10px;padding:8px 10px;background:var(--sunk);border-radius:var(--r);font-size:.9rem}
+.agenda{margin-top:10px;font-size:.93rem}
+.agenda b,.lbl{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;display:block}
+a.lnk,button.lnk{color:var(--accent);background:none;border:0;padding:0;font:inherit;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.swatch{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px;border:1px solid var(--line)}
+.books{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:10px}
+.links{margin-top:10px;font-size:.9rem}
+.note{font-size:.9rem;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r);padding:10px 12px;margin:0 0 18px;max-width:80ch}
+/* book guide */
+.order{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:0 0 22px;padding:0;list-style:none;counter-reset:o}
+.order li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;font-size:.9rem;position:relative}
+.order li b{display:block;font-family:var(--display);font-weight:500;font-size:.98rem;line-height:1.25}
+.order li .n{font-family:var(--mono);font-size:.66rem;color:var(--bronze);letter-spacing:.08em;text-transform:uppercase}
+.order li.opt{border-style:dashed}
+.order li.soon{border-style:dashed;opacity:.85}
+.bookcard{display:grid;grid-template-columns:64px 1fr;gap:14px}
+.spine{border-radius:4px;min-height:96px;display:flex;align-items:flex-end;justify-content:center;padding:12px 0;font-family:var(--display);font-size:1rem;letter-spacing:.14em;color:#fff;line-height:1;box-shadow:inset -6px 0 0 rgba(0,0,0,.18)}
+.spine span{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
+.bk-plot{margin:8px 0 0;font-size:.95rem}
+.bk-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin-top:12px}
+.buybtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;box-sizing:border-box;font:inherit;font-weight:500;font-size:.9rem;line-height:1.2;cursor:pointer;border:1px solid var(--accent);text-decoration:none;color:var(--accent-ink);background:var(--accent);border-radius:var(--r);padding:8px 14px;min-height:40px}
+.buybtn:hover{filter:brightness(1.1)}
+.buybtn svg{width:16px;height:16px}
+.buybtn.ghost{background:none;color:var(--accent);border-color:var(--line)}
+.castlist{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.92rem;margin-top:4px}
+/* courts */
+.court-h{display:flex;gap:10px;align-items:center}
+.court-dot{width:28px;height:28px;border-radius:50%;flex-shrink:0;border:2px solid var(--line)}
+.pos{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:3px;font-size:.92rem}
+.pos li{display:grid;grid-template-columns:118px 1fr;gap:8px}
+.pos li span:first-child{color:var(--muted);font-size:.85rem}
+.war{margin-top:10px;padding:10px 12px;border-left:3px solid var(--bronze);background:var(--sunk);border-radius:0 var(--r) var(--r) 0;font-size:.92rem}
+/* world */
+.sec-h{margin:34px 0 10px}
+.sec-h:first-child{margin-top:0}
+.eras{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.era{border-left:3px solid var(--accent);padding:6px 0 6px 12px;font-size:.93rem;scroll-margin-top:180px}
+.era h3{font-size:1.02rem}
+.era .when{font-family:var(--mono);font-size:.68rem;color:var(--bronze);letter-spacing:.06em;text-transform:uppercase}
+.era.flash{background:var(--sunk)}
+ol.tl{list-style:none;margin:0;padding:0;position:relative}
+ol.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+ol.tl li{position:relative;padding:0 0 16px 30px;scroll-margin-top:180px}
+ol.tl li::before{content:"";position:absolute;left:1px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+ol.tl li.bk::before{background:var(--accent)}
+ol.tl li.flash{background:var(--sunk);border-radius:var(--r)}
+ol.tl .when{font-family:var(--mono);font-size:.7rem;color:var(--bronze);letter-spacing:.06em;text-transform:uppercase}
+ol.tl b{display:block;font-weight:700}
+ol.tl p{margin:2px 0 0;color:var(--muted);font-size:.93rem;max-width:72ch}
+.mapwrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:860px){.mapwrap{grid-template-columns:1fr}}
+.mapsvg{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.mapsvg svg{display:block;width:100%;height:auto}
+.mapsvg .land{fill:var(--sunk);stroke:var(--line);stroke-width:1.5}
+.mapsvg .sea{fill:var(--bg)}
+.mapsvg .reg{stroke:var(--surface);stroke-width:2;cursor:pointer;transition:opacity .2s}
+.mapsvg .reg:hover,.mapsvg .reg.on{opacity:1!important;stroke:var(--fg)}
+.mapsvg text{font-family:var(--display);font-size:13px;fill:var(--fg);pointer-events:none}
+.mapsvg text.sm{font-family:var(--body);font-size:11px;fill:var(--muted);font-style:italic}
+.mapsvg .river{fill:none;stroke:var(--accent);stroke-width:5;opacity:.55}
+.mapsvg .pin{cursor:pointer}
+.mapsvg .pin circle{fill:var(--bronze);stroke:var(--surface);stroke-width:2}
+.mapsvg .pin.on circle{fill:var(--accent);r:9}
+.places{display:grid;gap:8px}
+.place{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;font-size:.92rem;scroll-margin-top:180px;cursor:pointer;text-align:left;font:inherit;color:var(--fg);width:100%}
+.place b{font-family:var(--display);font-weight:500}
+.place.flash,.place.on{box-shadow:0 0 0 2px var(--accent)}
+.place .n{font-family:var(--mono);font-size:.68rem;color:var(--bronze);margin-right:6px}
+/* recaps */
+.recap{max-width:820px}
+.recap h3{font-size:1.35rem}
+.recap h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze);margin:18px 0 6px;font-weight:500}
+.recap ul{margin:0;padding-left:20px;display:grid;gap:5px}
+.recap p{margin:0 0 8px}
+.remember{margin-top:16px;padding:12px 14px;border:1px solid var(--accent);border-radius:var(--r);background:var(--sunk)}
+.remember h4{margin-top:0;color:var(--accent)}
+/* graph views */
+.split{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+@media (max-width:820px){.split{grid-template-columns:1fr}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:auto;min-width:0;max-height:78vh}
+.stage svg{display:block}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;position:sticky;top:190px}
+.panel ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px;font-size:.93rem}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:5px;border-radius:2px}
+svg text{font-family:var(--body);fill:var(--fg)}
+.node{cursor:pointer}
+.node rect,.node circle{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.node.focus rect,.node.focus circle{stroke:var(--accent);stroke-width:3}
+.node.near rect,.node.near circle{stroke:var(--bronze);stroke-width:2}
+.node.dim,.edge.dim{opacity:.13}
+.node.dead text{fill:var(--muted)}
+.node:focus-visible rect{stroke:var(--accent);stroke-width:3}
+.edge{fill:none;stroke-width:1.8;transition:opacity .2s}
+.empty{color:var(--muted);padding:30px 0;text-align:center}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+button,select,input,.node{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.tabicon,.ts,.sheet-close{display:none}
+/* ---- Spoiler shield ---- */
+.spbtn{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:.85rem;font-weight:500;color:var(--fg);background:var(--sunk);border:1px solid var(--line);border-radius:999px;padding:6px 12px;min-height:36px;cursor:pointer;align-self:center}
+.spbtn:hover{border-color:var(--accent)}
+.spbtn svg{width:17px;height:17px;flex-shrink:0}
+.sp-hidden{filter:blur(6px);cursor:pointer;user-select:none;-webkit-user-select:none;transition:filter .2s}
+.sp-hidden *{pointer-events:none}
+.sp-strip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:.88rem;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r);padding:9px 12px;background:var(--surface)}
+.sp-strip b{color:var(--fg);font-weight:500}
+.sp-note{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:12px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--bad);border-radius:var(--r);background:var(--surface);font-size:.93rem}
+.sp-note .chip{min-height:40px}
+main .wrap.sp-wrap{padding-bottom:0}
+main .wrap.sp-wrap + .wrap{padding-top:14px}
+dialog.spd{border:1px solid var(--line);border-radius:12px;padding:0;max-width:480px;width:calc(100% - 32px);max-height:calc(100dvh - 32px);overflow:auto;background:var(--surface);color:var(--fg);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+dialog.spd::backdrop{background:rgba(10,8,22,.65)}
+.spd .in{padding:22px 22px 18px}
+.spd h2{margin:6px 0 8px}
+.spd p{margin:0 0 16px;color:var(--muted);font-size:.95rem}
+.spd .opts{display:grid;gap:7px}
+.spd .opts button{text-align:left;font:inherit;cursor:pointer;background:var(--bg);color:var(--fg);border:1.5px solid var(--line);border-radius:var(--r);padding:9px 14px}
+.spd .opts button:hover,.spd .opts button.cur{border-color:var(--accent)}
+.spd .opts b{display:block;font-weight:700}
+.spd .opts span{display:block;font-size:.84rem;color:var(--muted)}
+.spd .fine{margin:12px 0 0;font-size:.8rem}
+/* ---- The Reader's Atlas extras ---- */
+.atlas{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:5px 11px;align-self:center}
+.atlas:hover{color:var(--fg);border-color:var(--accent)}
+.atlas svg{width:16px;height:15px;flex-shrink:0}
+.atlas path{fill:var(--gold)}
+.atlas .moon-book{fill:var(--surface)}
+footer.site{border-top:1px solid var(--line);background:var(--stars),var(--surface);margin-top:10px}
+footer.site .wrap{padding-block:26px 34px;display:grid;gap:14px}
+footer.site h2{font-size:1.3rem}
+.buyrow{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.buy{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);color:var(--fg);text-decoration:none;min-height:44px}
+.buy:hover{border-color:var(--accent)}
+.buy b{font-family:var(--display);font-weight:500;font-size:.98rem;line-height:1.25}
+.buy span{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.foot-actions{display:flex;flex-wrap:wrap;gap:10px}
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.kofi,.home,.social{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:var(--r);font-weight:500;text-decoration:none}
+.kofi{background:var(--accent);color:var(--accent-ink)}
+.kofi:hover{filter:brightness(1.1)}
+.home,.social{border:1px solid var(--line);color:var(--fg)}
+.home:hover,.social:hover{border-color:var(--accent)}
+.kofi svg,.home svg,.social svg{width:18px;height:18px;flex-shrink:0}
+.fine{margin:0;color:var(--muted);font-size:.86rem;max-width:80ch}
+.fine a{color:var(--accent)}
+/* ---- back to top ---- */
+.totop{position:fixed;z-index:24;right:max(20px,calc(env(safe-area-inset-right,0px) + 16px));bottom:calc(24px + env(safe-area-inset-bottom,0px));
+  display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:.85rem;font-weight:500;padding:10px 14px;min-height:44px;border-radius:999px;
+  border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.totop:hover{filter:brightness(1.1)}
+.totop svg{width:18px;height:18px}
+/* ---- phone ---- */
+@media (max-width:700px){
+  .brand small{display:none}
+  .brand h1{font-size:1.2rem}
+  .bar .wrap{padding-block:10px;gap:8px}
+  nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--surface);border-top:1px solid var(--line);
+    padding:4px max(2px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) max(2px,env(safe-area-inset-left,0px));gap:0;overflow:visible}
+  nav.tabs button{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;min-height:52px;font-size:.62rem;border-bottom:0}
+  nav.tabs button[aria-selected="true"]{color:var(--accent)}
+  .tabicon{display:block;width:22px;height:22px}
+  .tl-l{display:none} .ts{display:block}
+  main .wrap{padding-block:16px 24px}
+  .card,.era,ol.tl li,.place{scroll-margin-top:130px}
+  .grid,.grid.wide{grid-template-columns:1fr}
+  h2{font-size:1.35rem}
+  .chip{min-height:40px}
+  .controls select{flex:1 1 auto;min-height:40px}
+  .count{width:100%;margin-left:0}
+  .bookcard{grid-template-columns:44px 1fr;gap:12px}
+  .spine{min-height:80px;font-size:.85rem}
+  .pos li{grid-template-columns:96px 1fr}
+  .panel{position:fixed;left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px));z-index:22;max-height:42vh;overflow:auto;
+    border-radius:14px 14px 0 0;border-bottom:0;box-shadow:0 -8px 28px rgba(0,0,0,.25);
+    padding:14px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
+  .panel.idle{display:none}
+  .sheet-close{display:block;position:absolute;top:10px;right:max(12px,env(safe-area-inset-right,0px));font:inherit;font-size:.85rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--sunk);color:var(--fg)}
+  .legend{gap:8px 12px;font-size:.8rem}
+  .spbtn span{display:none}.spbtn{padding:6px 9px}
+  .atlas span{display:none}.atlas{padding:5px 8px}
+  .totop{bottom:calc(74px + env(safe-area-inset-bottom,0px));right:max(14px,calc(env(safe-area-inset-right,0px) + 10px));padding:10px 12px}
+  .totop span{display:none}
+  footer.site .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="wrap">
+    <div class="brand"><h1><span class="pre">The</span> Elsie Silver <span class="thorn">Reader's Guide</span></h1><small>Unofficial · 14 books · 4 towns</small><a class="atlas" href="https://readersatlas.com" aria-label="The Reader's Atlas: more character guides"><svg viewBox="0 0 140 130" aria-hidden="true"><path d="M28 60 A46 46 0 1 0 112 60 A38 38 0 1 1 28 60 Z"/><path class="moon-book" d="M36 74 C48 68 60 69 70 76 C80 69 92 68 104 74 L104 100 C92 94 80 95 70 102 C60 95 48 94 36 100 Z"/><path d="M70 4 L75 15 L86 20 L75 25 L70 36 L65 25 L54 20 L65 15 Z"/></svg><span>The Reader's Atlas</span></a><button class="spbtn" id="sp-open" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg><span>Spoilers</span></button></div>
+    <div class="gsearch">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="gq" type="search" placeholder="Search everything: characters, towns, places, events…" autocomplete="off" aria-label="Search everything">
+      <div class="gres" id="gres" hidden></div>
+    </div>
+    <nav class="tabs" role="tablist" id="tabs"></nav>
+  </div>
+</header>
+
+<button class="totop" id="totop" type="button" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg><span>Back to top</span></button>
+<main><div class="wrap sp-wrap"><div class="sp-strip" id="sp-strip"></div></div><div class="wrap" id="view"></div></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Gold Rush Ranch · Chestnut Springs · Rose Hill · Emerald Lake</p>
+      <h2>Read the books</h2>
+      <p class="fine" style="margin-top:4px">14 books across four series, in reading order, each with a link to buy.</p>
+    </div>
+    <div><button type="button" class="buybtn ghost" id="readbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Go to the Book Guide</button></div>
+    <div class="foot-actions">
+      <a class="kofi" href="https://ko-fi.com/readersatlas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 4v1.5M11.5 3v2.5"/></svg>Buy me a coffee</a>
+      <div class="socials"><a class="social" href="https://www.instagram.com/readers.atlas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>@readers.atlas</a>
+      <a class="social" href="https://www.tiktok.com/@readers.atlas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.8 2.3 4.6 5 5"/></svg>TikTok</a></div>
+      <a class="home" href="https://readersatlas.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>More guides at The Reader's Atlas</a>
+    </div>
+    <p class="fine">Fan-made guide, not affiliated with Elsie Silver or her publishers (Bloom Books, Piatkus or Atria Books). All characters and worlds belong to their creators.</p>
+    <p class="fine">Some book links may be affiliate links, which means I may earn a small commission at no extra cost to you.</p>
+    <p class="fine">Part of <a href="https://readersatlas.com">The Reader's Atlas</a> · <a href="https://www.instagram.com/readers.atlas" target="_blank" rel="noopener">@readers.atlas</a> on Instagram · <a href="https://www.tiktok.com/@readers.atlas" target="_blank" rel="noopener">@readers.atlas</a> on TikTok · <a href="https://ko-fi.com/readersatlas" target="_blank" rel="noopener">Ko-fi</a></p>
+  </div>
+<dialog class="spd" id="spd" aria-labelledby="spd-t">
+  <div class="in">
+    <p class="eyebrow">Spoiler warning</p>
+    <h2 id="spd-t">How far have you read?</h2>
+    <p>This codex covers all four series. Pick the book you're on in the recommended reading order and I'll blur anything from later books. Tap a blurred item to peek, or change this any time with the eye button at the top. Started with Chestnut Springs? Pick your place anyway; a few Gold Rush Ranch details will show.</p>
+    <div class="opts" id="spd-opts"></div>
+    <p class="fine">Your choice is remembered on this device.</p>
+  </div>
+</dialog>
+</footer>
+
+<script>
+/* ============================================================
+   DATA
+   Book codes, in recommended reading order:
+   OR Off to the Races · PF A Photo Finish · FR The Front Runner · FS A False Start
+   FL Flawless · HE Heartless · PO Powerless · RE Reckless · HO Hopeless
+   WL Wild Love · WE Wild Eyes · WS Wild Side · WC Wild Card · FD Fever Dream
+   ============================================================ */
+const SERIES={
+ grr:{name:"Gold Rush Ranch",town:"Ruby Creek, BC",col:"#a0612b"},
+ cs:{name:"Chestnut Springs",town:"Chestnut Springs, AB",col:"#7d3b2c"},
+ rh:{name:"Rose Hill",town:"Rose Hill, BC",col:"#c0607a"},
+ el:{name:"Emerald Lake",town:"Emerald Lake, BC",col:"#2e7d6b"},
+ other:{name:"Elsewhere",town:"",col:"#8a7a66"}
+};
+const SERCOL=Object.fromEntries(Object.entries(SERIES).map(([k,v])=>[k,v.col]));
+
+const BOOKLIST=[
+ {c:"OR",s:"grr",n:"1",title:"Off to the Races",abbr:"Off to the Races",year:2021,col:"#4f86b0",sp:-1,
+  trope:"Grumpy boss · enemies to lovers · horse racing",
+  plot:"Billie Black has spent ten years hiding from her family's scandal. She turns up at Gold Rush Ranch in Ruby Creek wanting the head trainer job. Its brooding owner, Vaughn Harding, gives her three months to fix Double Diablo, the ranch's most difficult racehorse. Fail, and she's gone.",
+  cast:["billie","vaughn","dd","hank","violet","cole","stefan","mira"]},
+ {c:"PF",s:"grr",n:"2",title:"A Photo Finish",abbr:"A Photo Finish",year:2021,col:"#c08a26",sp:-1,
+  trope:"Age gap · forced proximity · anonymous online friends",
+  plot:"Violet Eaton has just been promoted to jockey at Gold Rush Ranch. For a year she chatted anonymously online with a stranger, then ghosted him. Now Vaughn's reclusive older brother Cole, an ex-soldier, has moved to town. He knows something she doesn't, and when a fall puts her out of the saddle they end up under the same roof.",
+  cast:["violet","cole","billie","vaughn","hank","mira"]},
+ {c:"FR",s:"grr",n:"3",title:"The Front Runner",abbr:"The Front Runner",year:2021,col:"#6f8f5a",sp:-1,
+  trope:"Three-date deal · rivals · \"he's not the villain\"",
+  plot:"Dr. Mira Thorne, the ranch vet, has turned Stefan Dalca down for years. He owns rival ranch Cascade Acres and everyone at Gold Rush thinks he's the bad guy. When a struggling foal needs help only he can give, his price is three dates. Rules: no touching, no telling, no falling in love.",
+  cast:["mira","stefan","billie","violet","nadia","griffin"]},
+ {c:"FS",s:"grr",n:"4",title:"A False Start",abbr:"A False Start",year:2022,col:"#8a4a86",sp:-1,
+  trope:"Brother's best friend · age gap · second chance",
+  plot:"At nineteen, Nadia Dalca asks a bearded stranger in a Ruby Creek bar for a congratulations kiss. He turns out to be Griffin Sinclaire, her brother Stefan's best friend and a former Super Bowl quarterback. Two years later he's back on Gold Rush Ranch breaking young horses, and avoiding her as hard as he can.",
+  cast:["nadia","griffin","stefan","mira","billie"]},
+ {c:"FL",s:"cs",n:"1",title:"Flawless",abbr:"Flawless",year:2022,col:"#cc5484",sp:-1,
+  trope:"Grumpy-sunshine · bodyguard-style babysitting · bull riding",
+  plot:"Champion bull rider Rhett Eaton has one too many bad headlines. His agent, Kip Hamilton, sends his daughter Summer to keep Rhett out of trouble for the eight weeks before the World Finals. She moves onto his family's Wishing Well Ranch, and neither of them is happy about it.",
+  cast:["rhett","summer","harvey","cade","beau","kip","winter","theo","emmett"]},
+ {c:"HE",s:"cs",n:"2",title:"Heartless",abbr:"Heartless",year:2022,col:"#5484a8",sp:-1,
+  trope:"Single dad · nanny · age gap",
+  plot:"Cade Eaton, the eldest and grumpiest Eaton brother, is raising his son Luke alone and can't find a nanny who isn't more interested in him. Out of options, he hires Summer's best friend Willa Grant for the summer. She's a bartender, a lot of fun, and absolutely not his type. Supposedly.",
+  cast:["cade","willa","luke","harvey","rhett","summer","beau","jasper"]},
+ {c:"PO",s:"cs",n:"3",title:"Powerless",abbr:"Powerless",year:2023,col:"#6a4a9a",sp:-1,
+  trope:"Friends to lovers · runaway bride · hockey",
+  plot:"Ballerina Sloane Winthrop is about to marry the man her father picked. NHL goalie Jasper Gervais, her childhood friend and the Eatons' adopted brother, has kept his feelings to himself for years. When the wedding goes sideways, he's the one who gets her out the door.",
+  cast:["sloane","jasper","harvey","violet","beau","sterling","robert"]},
+ {c:"RE",s:"cs",n:"4",title:"Reckless",abbr:"Reckless",year:2023,col:"#cc5454",sp:-1,
+  trope:"One-night stand · secret baby · age gap",
+  plot:"Dr. Winter Hamilton, Summer's cold, guarded older half-sister, moves to Chestnut Springs to start over after her marriage falls apart. One night with Rhett's young protégé, bull rider Theo Silva, was meant to stay a secret. It doesn't stay simple.",
+  cast:["winter","theo","summer","rhett","kip","rob"]},
+ {c:"HO",s:"cs",n:"5",title:"Hopeless",abbr:"Hopeless",year:2023,col:"#4f9a80",sp:6,
+  trope:"Fake engagement · wrong side of the tracks",
+  plot:"Beau Eaton, Chestnut Springs' golden boy, is home and struggling. Bailey Jansen, who tends bar at The Railspur, carries the town's worst surname. Beau bets nobody holds her name against her, and a fake engagement is born: his family stops meddling, she saves up to leave town.",
+  cast:["beau","bailey","harvey","cade","willa","rhett","summer","sloane"]},
+ {c:"WL",s:"rh",n:"1",title:"Wild Love",abbr:"Wild Love",year:2024,col:"#d84860",sp:-1,
+  trope:"Brother's best friend · billionaire · surprise daughter",
+  plot:"Rosie Belmont comes home to Rose Hill after a terrible end to her city job and asks for work from the one man she shouldn't: her brother West's best friend, Ford Grant, Forbes' \"world's hottest billionaire\". Ford has just opened a recording studio, and a twelve-year-old girl has turned up claiming to be his daughter.",
+  cast:["rosie","ford","cora","west","willa","fordsr","bash"]},
+ {c:"WE",s:"rh",n:"2",title:"Wild Eyes",abbr:"Wild Eyes",year:2024,col:"#d87848",sp:-1,
+  trope:"Single dad · celebrity · forced proximity",
+  plot:"Country star Skylar Stone flees Los Angeles with no plan and a parrot. In Rose Hill she ends up in the bunkhouse of West Belmont, a horse trainer and divorced dad of two who saves her from her own bad decision with a grizzly bear. Friends only. That's the deal.",
+  cast:["skylar","west","emmy","oliver","ford","rosie","cora","tabitha","doris"]},
+ {c:"WS",s:"rh",n:"3",title:"Wild Side",abbr:"Wild Side",year:2025,col:"#5fa860",sp:-1,
+  trope:"Marriage of convenience · enemies to lovers · found family",
+  plot:"Chef Tabitha Garrison blames Rhys Dupris for her sister's relapse. Now her sister is gone, and her will names Rhys, a masked pro wrestler, as guardian of her three-year-old son Milo. He's meant to take Milo to Florida. Then Rhys's visa runs into trouble, and Tabitha proposes the unthinkable.",
+  cast:["tabitha","rhys","milo","bash","clyde","rosie","ford","west"]},
+ {c:"WC",s:"rh",n:"4",title:"Wild Card",abbr:"Wild Card",year:2025,col:"#6060a8",sp:-1,
+  trope:"Age gap · missed connection · ex's dad",
+  plot:"Stranded at Vancouver airport, fire pilot Bash Rousseau and yoga teacher Gwen Dawson spend one unforgettable night together, then lose each other over a mistyped phone number. Eight months later she's dating a young NHL player. Bash has just found out he has a grown son.",
+  cast:["bash","gwen","tripp","clyde","west","rhys","ford"]},
+ {c:"FD",s:"el",n:"1",title:"Fever Dream",abbr:"Fever Dream",year:2026,col:"#4f5aa8",sp:-1,
+  trope:"Dating show · rival's little sister · secret romance",
+  plot:"To save his grandparents' failing sport-horse farm, bull rider Emmett Bush signs on as the bachelor of reality show Romance Ranch, filmed on the farm itself. The location consultant is Julia Silva, the little sister of his biggest rival, Theo. And they've met before, on a night neither of them has told anyone about.",
+  cast:["emmett","julia","tina","leon","parker","riley","evan","theo","richard"]}
+];
+const BOOKS=Object.fromEntries(BOOKLIST.map(b=>[b.c,b.abbr]));
+const BIDX=Object.fromEntries(BOOKLIST.map((b,i)=>[b.c,i]));
+const UPCOMING={title:"Midnight Rush",abbr:"Midnight Rush",date:"April 2027",note:"Emerald Lake book 2. Parker Brandt runs for mayor to stop a development threatening the family farm, and her secret campaign coach is Professor Noah Hawkins, the man who failed her on a technicality."};
+
+/* Characters
+   s = series group · role: lead | sup | bad · books = first appearance
+   loveB / twB / rev = book where that detail is revealed · jobB = book where their job changes */
+const CHARS=[
+ /* ---- Gold Rush Ranch ---- */
+ {id:"billie",name:"Billie Black",aka:"Trainer of Double Diablo",s:"grr",role:"lead",books:"OR",
+  job:"Racehorse trainer at Gold Rush Ranch",
+  feat:"Fiercely independent and blunt, with a gift for difficult horses. Stepped out of public life for a decade after her father, a former prime minister, went down in a sex scandal.",
+  love:"Vaughn Harding",loveB:"OR",age:"Late 20s",
+  twist:"Vaughn nearly sells DD, then signs him over to her for one dollar. Renamed Mister Black, the horse wins the next Denman Derby in her colours.",twB:"OR",
+  story:"Married to Vaughn by later books, and on bed rest with a pregnancy complication in A False Start.",conn:"Vaughn's wife; Violet's mentor"},
+ {id:"vaughn",name:"Vaughn Harding",aka:"Owner of Gold Rush Ranch",s:"grr",role:"lead",books:"OR",
+  job:"Heir to the Harding mining fortune, on leave to run his late grandfather's racing ranch",
+  feat:"Brooding and guarded, grieving his grandfather Dermot and fighting race-fixing rumours tied to the family name.",
+  love:"Billie Black",loveB:"OR",age:"30s",
+  twist:"Agrees to sell DD to Stefan Dalca in exchange for clearing Dermot's name, then calls it off.",twB:"OR",
+  story:"Co-owns the ranch with his brother Cole.",conn:"Billie's husband; Cole's brother"},
+ {id:"cole",name:"Cole Harding",aka:"Vaughn's older brother",s:"grr",role:"lead",books:"OR",
+  job:"Former soldier; co-owner of Gold Rush Ranch",
+  feat:"Reclusive, closed off and practical, carrying PTSD and childhood scars he keeps hidden.",
+  love:"Violet Eaton. They'd chatted anonymously online for a year before meeting.",loveB:"PF",age:"30s (an age gap with Violet)",
+  twist:"He recognises Violet as his anonymous online friend long before she knows who he is.",twB:"PF",
+  story:"Married to Violet and living at Gold Rush Ranch by Powerless.",conn:"Violet's husband; Harvey Eaton's son-in-law"},
+ {id:"dd",name:"Double Diablo",aka:"\"DD\", later Mister Black",s:"grr",role:"sup",books:"OR",
+  job:"Racehorse",feat:"Volatile, talented and misunderstood. Billie wins him over with patience.",love:"",age:"A young colt",
+  twist:"Wins the Denman Derby, is nearly sold, and races on as Billie's horse, Mister Black.",twB:"OR",story:"",conn:"Billie's horse"},
+ {id:"hank",name:"Hank Brandt",aka:"Head groom",s:"grr",role:"sup",books:"OR",
+  job:"Retired racehorse trainer, now head groom and stable manager",
+  feat:"Dermot Harding's best friend and the ranch's steady, fatherly voice.",love:"",age:"Older",
+  story:"Shares a surname with Fever Dream's Brandt family. As far as this guide knows, the books haven't confirmed a link.",conn:"Billie's mentor"},
+ {id:"dermot",name:"Dermot Harding",aka:"Founder of Gold Rush Ranch",s:"grr",role:"sup",books:"OR",status:"dead",
+  job:"Racehorse owner",feat:"Raised Vaughn after his father died. Hank's best friend.",love:"Ada Harding",age:"Died before the series",
+  twist:"A letter confirms he really was involved in the race-fixing scandal.",twB:"OR",story:"",conn:"Vaughn and Cole's grandfather"},
+ {id:"mira",name:"Dr. Mira Thorne",aka:"The ranch vet",s:"grr",role:"lead",books:"OR",
+  job:"Large-animal veterinarian; runs the clinic and lives in a small apartment on Gold Rush Ranch",
+  feat:"Strong-willed and career-first. Billie and Violet's friend.",
+  love:"Stefan Dalca",loveB:"FR",age:"27 in The Front Runner",
+  twist:"Married to Stefan with a son, Silas, by A False Start.",twB:"FS",story:"Employs Nadia as a vet tech.",conn:"Stefan's wife"},
+ {id:"stefan",name:"Stefan Dalca",aka:"Owner of Cascade Acres",s:"grr",role:"lead",rev:"FR",books:"OR",
+  job:"Owns Cascade Acres, the rival racing ranch",
+  feat:"Handsome, persistent and cast as the villain in Off to the Races. Has asked Mira out for years.",
+  love:"Mira Thorne",loveB:"FR",age:"34 in The Front Runner",
+  twist:"Not the bad guy after all: a painful past and a fierce protectiveness sit under the swagger.",twB:"FR",
+  story:"Thirteen years older than his sister Nadia, whom he half-raised.",conn:"Mira's husband; Nadia's brother; Griffin's best friend"},
+ {id:"nadia",name:"Nadia Dalca",aka:"Stefan's little sister",s:"grr",role:"lead",books:"FR",
+  job:"Vet tech at Mira's clinic, then vet student at Emerald Lake",jobB:"FS",
+  feat:"Determined list-maker. Grew up with a violent, alcoholic father who turned on her at fourteen.",
+  love:"Griffin Sinclaire",loveB:"FS",age:"19, then 21",
+  twist:"Tops her class at Emerald Lake vet school; Griffin gives her the Wildflower Racehorse Rescue.",twB:"FS",story:"",conn:"Griffin's wife"},
+ {id:"griffin",name:"Griffin Sinclaire",aka:"Stefan's best friend",s:"grr",role:"lead",books:"FR",
+  job:"Former two-time Super Bowl quarterback; breaks young horses at Gold Rush Ranch",
+  feat:"Big and bearded. A brain injury ended his career and left him with a stutter. Recovering alcoholic. Sold Cascade Acres to Stefan.",
+  love:"Nadia Dalca",loveB:"FS",age:"Mid-30s (14 years older than Nadia)",
+  twist:"Drunk in Las Vegas on the night of his injury, he married a woman named Tonya, who comes back for money.",twB:"FS",
+  story:"Goes to rehab and gets therapy for the first time; proposes to Nadia every year, even after they're married.",conn:"Nadia's husband"},
+ {id:"patrick",name:"Patrick Cassel",aka:"The hired jockey",s:"grr",role:"bad",books:"OR",
+  job:"Jockey hired by Cole to ride DD",feat:"Arrogant, and rough with the horse.",love:"",age:"Adult",story:"",conn:"Billie's enemy"},
+ {id:"victor",name:"Victor Farrington",aka:"Billie's father",s:"grr",role:"bad",books:"OR",
+  job:"Former Canadian prime minister",feat:"His career ended in a sex scandal, and Billie's anonymity went with it.",love:"",age:"Older",story:"",conn:"Billie's estranged father"},
+
+ /* ---- Chestnut Springs ---- */
+ {id:"harvey",name:"Harvey Eaton",aka:"Patriarch of Wishing Well Ranch",s:"cs",role:"sup",books:"FL",
+  job:"Retired rancher",feat:"Warm, mischievous and impossible to fool. Took in Jasper as a teenager.",
+  love:"His late wife (the Eaton siblings' mother died in childbirth)",age:"60s",story:"",conn:"Father of Cade, Rhett, Beau and Violet"},
+ {id:"cade",name:"Cade Eaton",aka:"Eldest Eaton brother",s:"cs",role:"lead",books:"FL",
+  job:"Runs Wishing Well Ranch; single dad",
+  feat:"Grumpy, rigid and protective. Raised Luke alone after Luke's mother left, and shelved his own rodeo dreams to run the ranch.",
+  love:"Willa Grant",loveB:"HE",age:"Late 30s (an age gap with Willa)",
+  twist:"Willa's pregnancy; their daughter Emma arrives in the epilogue, and Luke asks to call Willa \"Mom\".",twB:"HE",
+  story:"Rides at the Canadian Championship Rodeo after Willa pushes him back into it. Marries her in Hopeless' epilogue.",conn:"Willa's husband; Luke's dad"},
+ {id:"rhett",name:"Rhett Eaton",aka:"The bull rider",s:"cs",role:"lead",books:"FL",
+  job:"Two-time world champion bull rider; later coaches for the federation",jobB:"FL",
+  feat:"Long hair, cocky grin, bad press. Still trying to prove himself to his ranching brothers.",
+  love:"Summer Hamilton",loveB:"FL",age:"32 in Flawless",
+  twist:"Walks out of the chute at the Vegas finals to choose Summer, retiring on the spot.",twB:"FL",
+  story:"Mentor to Theo Silva. Proposes by tracing the words across Summer's freckles.",conn:"Summer's husband; Theo's mentor"},
+ {id:"beau",name:"Beau Eaton",aka:"The war hero",s:"cs",role:"lead",books:"FL",
+  job:"Canadian special forces soldier; later a firefighter",jobB:"HO",
+  feat:"The town's golden boy, home with scars: insomnia, anger and too much whisky.",
+  love:"Bailey Jansen. A fake engagement that turns real.",loveB:"HO",age:"35 in Hopeless",
+  twist:"Goes missing on a mission in Powerless.",twB:"PO",
+  story:"Secretly bought The Railspur years ago to protect Bailey's job. Joins the fire department and moves to the city with her.",conn:"Bailey's fiancé; brought Jasper home"},
+ {id:"violet",name:"Violet Eaton",aka:"The Eatons' little sister",s:"cs",role:"lead",books:"OR",
+  job:"Groom turned jockey at Gold Rush Ranch",
+  feat:"Sweet but tenacious, and tired of four overprotective men. The Eaton who crosses into Gold Rush Ranch.",
+  love:"Cole Harding",loveB:"PF",age:"Early 20s",
+  twist:"A riding accident sidelines her and she moves in with Cole.",twB:"PF",
+  story:"Lives at Gold Rush Ranch with Cole; Sloane's cousin and best friend.",conn:"Cole's wife; the link between Ruby Creek and Chestnut Springs"},
+ {id:"willa",name:"Willa Grant",aka:"Summer's best friend",s:"cs",role:"lead",books:"FL",
+  job:"Bartender and former competitive show jumper; Luke's summer nanny",
+  feat:"Free-spirited, funny and loyal. Daughter of rock star Ford Grant Sr. and a sex therapist.",
+  love:"Cade Eaton",loveB:"HE",age:"25 in Heartless",
+  twist:"Pregnant with Cade's baby; she pulls away out of fear he'll feel trapped.",twB:"HE",
+  story:"Big sister to Wild Love's Ford Grant, the bridge to Rose Hill.",conn:"Cade's wife; Ford's sister"},
+ {id:"summer",name:"Summer Hamilton",aka:"Rhett's minder",s:"cs",role:"lead",books:"FL",
+  job:"Junior agent at her father's agency; later runs her own gym, Hamilton Athletics",jobB:"FL",
+  feat:"Polished, freckled and tougher than she looks. Has a surgery scar from a congenital heart defect. The daughter of Kip's affair with the family nanny.",
+  love:"Rhett Eaton",loveB:"FL",age:"25 in Flawless",
+  twist:"As a teen, she was groomed by her surgeon, Rob Valentine, who went on to marry her half-sister Winter.",twB:"FL",
+  story:"Gives Bailey a job in Hopeless.",conn:"Rhett's wife; Winter's half-sister"},
+ {id:"luke",name:"Luke Eaton",aka:"Cade's son",s:"cs",role:"sup",books:"FL",
+  job:"Kid",feat:"Exuberant and mischievous; says the things adults won't.",love:"",age:"5 in Heartless",story:"",conn:"Cade's son"},
+ {id:"jasper",name:"Jasper Gervais",aka:"The Eatons' adopted brother",s:"cs",role:"lead",books:"FL",
+  job:"Star goalie for the Calgary Grizzlies (pro hockey)",
+  feat:"Quiet and guarded, cap pulled low. Was living in his car as a teen until Beau brought him home. Lost his little sister Jenny in an ATV accident.",
+  love:"Sloane Winthrop",loveB:"PO",age:"Early 30s",
+  twist:"Suspended from the team when Beau's disappearance wrecks his game.",twB:"PO",story:"",conn:"Harvey's surrogate son; Sloane's partner"},
+ {id:"sloane",name:"Sloane Winthrop",aka:"\"Sunny\", the Eatons' cousin",s:"cs",role:"lead",books:"PO",
+  job:"Professional ballerina",
+  feat:"Graceful and disciplined; spent childhood summers at Wishing Well Ranch. Her image-obsessed father runs her life.",
+  love:"Jasper Gervais",loveB:"PO",age:"28 in Powerless",
+  twist:"A video of her fiancé cheating at his stag party lands on her wedding day. Jasper gets her out barefoot.",twB:"PO",story:"",conn:"Jasper's partner; Violet's cousin"},
+ {id:"winter",name:"Dr. Winter Hamilton",aka:"Summer's half-sister",s:"cs",role:"lead",books:"FL",
+  job:"Doctor",feat:"Cool, sharp and guarded after her husband's betrayal and a miscarriage.",
+  love:"Theo Silva",loveB:"RE",age:"30s (about 8–9 years older than Theo)",
+  twist:"Pregnant after one night with Theo, she raises baby Vivi alone because his team blocked her messages.",twB:"RE",
+  story:"She and Summer report Rob to the medical board. Pregnant again by the epilogue; married to Theo by Fever Dream.",conn:"Theo's wife; Julia's sister-in-law"},
+ {id:"theo",name:"Theo Silva",aka:"Rhett's protégé",s:"cs",role:"lead",books:"FL",
+  job:"Pro bull rider (WBRF)",feat:"Young, playful, persistent and soft-hearted.",
+  love:"Winter Hamilton",loveB:"RE",age:"Mid-20s",
+  twist:"Finds out he's a father when Vivi is nine months old; moves in next door and proposes at her first birthday.",twB:"RE",
+  story:"By Fever Dream he's a two-time champion and Emmett Bush's arch-rival.",conn:"Winter's husband; Julia's big brother"},
+ {id:"bailey",name:"Bailey Jansen",aka:"The Railspur bartender",s:"cs",role:"lead",books:"HO",
+  job:"Bartender at The Railspur; later works at Summer's gym and studies kinesiology",jobB:"HO",
+  feat:"Witty, direct and resilient. The youngest of the Jansens, the family the whole town whispers about.",
+  love:"Beau Eaton",loveB:"HO",age:"20s",
+  twist:"Learns Beau secretly owns the bar she works at, and leaves him over it.",twB:"HO",story:"",conn:"Beau's fiancée"},
+ {id:"kip",name:"Kip Hamilton",aka:"Rhett's agent",s:"cs",role:"sup",books:"FL",
+  job:"Sports agent",feat:"Summer and Winter's father. Summer was born of his affair with the family nanny.",love:"Married to Winter's mother",age:"60s",
+  twist:"Has a heart attack mid-book.",twB:"FL",story:"Brings Winter her childhood dollhouse as a peace offering.",conn:"Summer and Winter's father"},
+ {id:"rob",name:"Rob Valentine",aka:"Winter's ex-husband",s:"cs",role:"bad",rev:"FL",books:"FL",
+  job:"Cardiothoracic surgeon",feat:"Charming in public, manipulative and predatory in private.",love:"Winter (ex-wife)",age:"40s",
+  twist:"Groomed teenage Summer while she was his patient; later sues to cast doubt on Vivi's paternity.",twB:"FL",story:"",conn:"Winter's ex"},
+ {id:"robert",name:"Robert Winthrop",aka:"Sloane's father",s:"cs",role:"bad",books:"PO",
+  job:"Businessman",feat:"Image-obsessed; treats his daughter's life as a business deal.",love:"Cordelia Winthrop",age:"60s",story:"",conn:"Sloane's father"},
+ {id:"sterling",name:"Sterling Woodcock",aka:"Sloane's fiancé",s:"cs",role:"bad",books:"PO",
+  job:"Son of Robert's business associate",feat:"Possessive and callous.",love:"Engaged to Sloane",age:"30s",story:"",conn:"Sloane's ex-fiancé"},
+
+ /* ---- Rose Hill ---- */
+ {id:"ford",name:"Ford Grant",aka:"\"The world's hottest billionaire\"",s:"rh",role:"lead",books:"WL",
+  job:"Built the Gramophone app; owns Wild Rose Records in Rose Hill",
+  feat:"Former band geek turned billionaire who found money boring. Has quietly loved Rosie for about a decade.",
+  love:"Rosie Belmont",loveB:"WL",age:"30s",
+  twist:"Cora exists because of a sperm-bank donation from his youth.",twB:"WL",
+  story:"Rescued Rosie's teenage diary from a ditch years ago and never read it. Proposes in the epilogue; married by Wild Side.",conn:"Willa's brother; West's best friend; Cora's dad"},
+ {id:"rosie",name:"Rosie Belmont",aka:"Rosalie, West's little sister",s:"rh",role:"lead",books:"WL",
+  job:"Office manager at Ford's studio, then partner in Wild Rose Records",jobB:"WL",
+  feat:"Bright, sarcastic and stubborn. Came home after her boss assaulted her and she was fired.",
+  love:"Ford Grant",loveB:"WL",age:"Late 20s",story:"Maid of honour at Tabitha's wedding.",conn:"Ford's wife; West's sister"},
+ {id:"cora",name:"Cora Holland",aka:"Ford's daughter",s:"rh",role:"sup",books:"WL",
+  job:"Kid; budding musician",feat:"Sullen, witty and bold. Learns guitar from her grandad Ford Sr.",love:"",age:"12 in Wild Love",
+  story:"Her mum Marilyn moves to Rose Hill after treatment for depression.",conn:"Ford's daughter"},
+ {id:"fordsr",name:"Ford Grant Sr.",aka:"Rock star dad",s:"rh",role:"sup",books:"WL",
+  job:"Famous musician",feat:"Gentler with his granddaughter than his son expected.",love:"Gemma Grant",age:"60s",story:"",conn:"Ford and Willa's father"},
+ {id:"west",name:"West Belmont",aka:"Weston, captain of the dads' bowling team",s:"rh",role:"lead",books:"WL",
+  job:"Horse trainer on the Belmont family property",
+  feat:"Rugged, steady and patient. Divorced, amicably co-parenting with Mia.",
+  love:"Skylar Stone",loveB:"WE",age:"30s",
+  twist:"Punches Rosie's attacker in Wild Love and ends up in jail for the night.",twB:"WL",
+  story:"Proposes to Skylar a year on, on the backroad where they met.",conn:"Rosie's brother; Ford's best friend"},
+ {id:"skylar",name:"Skylar Stone",aka:"Country superstar",s:"rh",role:"lead",books:"WE",
+  job:"Country singer",feat:"Burnt out and controlled by her father and agent. Travels with a parrot named Cherry.",
+  love:"West Belmont",loveB:"WE",age:"20s",
+  twist:"Her father leaked her private photos. She fires him live on TV and wins Song of the Year for \"Photosynthesis\".",twB:"WE",story:"",conn:"West's partner"},
+ {id:"emmy",name:"Emmy Belmont",aka:"West's daughter",s:"rh",role:"sup",books:"WL",job:"Kid",feat:"Confident, a little feral, budding entrepreneur.",love:"",age:"6 in Wild Eyes",story:"",conn:"West's daughter"},
+ {id:"oliver",name:"Oliver Belmont",aka:"\"Ollie\", West's son",s:"rh",role:"sup",books:"WL",job:"Kid",feat:"Quiet, bookish, has selective mutism. Gives Skylar the first line that unlocks her songwriting.",love:"",age:"8 in Wild Eyes",story:"",conn:"West's son"},
+ {id:"tabitha",name:"Tabitha Garrison",aka:"Chef at Bighorn Bistro",s:"rh",role:"lead",books:"WE",
+  job:"Chef and owner of Bighorn Bistro",feat:"Fierce, grieving, devoted to her nephew Milo.",
+  love:"Rhys Dupris",loveB:"WS",age:"30s",
+  twist:"Her sister Erika's recovery journals show Rhys never evicted her; he'd been helping all along.",twB:"WS",
+  story:"Daughter Minka in the epilogue.",conn:"Rhys's wife; Milo's aunt"},
+ {id:"rhys",name:"Rhys Dupris",aka:"The masked wrestler \"Wild Side\"",s:"rh",role:"lead",books:"WS",
+  job:"Pro wrestler in the WPW; Erika's former landlord at his Emerald Lake property",
+  feat:"Huge, gentle, grew up in foster care. Builds Lego dinosaurs with Milo.",
+  love:"Tabitha Garrison",loveB:"WS",age:"30s",
+  twist:"Has Tabitha unmask him in front of 70,000 fans; a botched move later leaves him with a spinal injury.",twB:"WS",
+  story:"Marries Tabitha to keep his visa (and Milo), then for real. Retires and takes the Garrison name.",conn:"Tabitha's husband; Milo's guardian"},
+ {id:"milo",name:"Milo Garrison",aka:"Tabitha's nephew",s:"rh",role:"sup",books:"WS",job:"Kid",feat:"Loves dinosaurs, excavators and his cat Cleocatra.",love:"",age:"3 in Wild Side",story:"",conn:"Erika's son"},
+ {id:"bash",name:"Bash Rousseau",aka:"Sebastian, the fire pilot",s:"rh",role:"lead",books:"WL",
+  job:"Aerial wildland firefighter and contractor (he built Ford's studio)",
+  feat:"Grumpy, burnt out, a bowling-team regular. Rhys's best man.",
+  love:"Gwen Dawson",loveB:"WC",age:"40 in Wild Card",
+  twist:"Learns he has a 24-year-old son, Tripp, whose mother hid the pregnancy. Tripp is dating Gwen.",twB:"WC",
+  story:"Donates a kidney to Clyde. Flies into a wildfire to rescue Gwen; repaints his plane lavender and names it Wild Card.",conn:"Gwen's husband; Tripp's dad"},
+ {id:"gwen",name:"Gwen Dawson",aka:"Yoga teacher",s:"rh",role:"lead",books:"WC",
+  job:"Yoga instructor",feat:"Warm and unguarded, with an emotionally abusive father. Befriends a raccoon named Sly.",
+  love:"Bash Rousseau",loveB:"WC",age:"27 in Wild Card",
+  twist:"Moves into Bash's house as his live-in aide after his kidney surgery, courtesy of Clyde.",twB:"WC",story:"",conn:"Bash's wife"},
+ {id:"tripp",name:"Tripp Coleman",aka:"Bash's son",s:"rh",role:"sup",books:"WC",job:"Pro hockey player (NHL)",feat:"Young, competitive, and lied to about his father for years.",love:"Gwen (before Bash)",age:"24",story:"Gives his blessing in the end.",conn:"Bash's son"},
+ {id:"clyde",name:"Clyde Gibbons",aka:"Rose Hill's matchmaker",s:"rh",role:"sup",books:"WS",job:"Retired local",feat:"Eccentric widower still devoted to his late wife Maya. Gwen's yoga student.",love:"Maya Gibbons (late wife)",age:"Elderly",story:"Bash gives him a kidney.",conn:"Friend of the bowling dads"},
+ {id:"doris",name:"Doris",aka:"Bar owner",s:"rh",role:"sup",books:"WE",job:"Runs the local bar; licensed officiant",feat:"Affectionately meddling.",love:"",age:"Older",story:"Officiates Tabitha and Rhys's wedding.",conn:"Rose Hill fixture"},
+
+ /* ---- Emerald Lake ---- */
+ {id:"emmett",name:"Emmett Brandt",alt:"Emmett Bush",nameB:"FD",aka:"Bull rider, Theo's rival",s:"el",role:"lead",rev:"FD",books:"FL",
+  job:"Pro bull rider (WBRF); the bachelor on Romance Ranch",
+  feat:"Plays a cocky, womanising rival in public. First appears in Flawless picking a fight with Summer at a bar.",
+  love:"Julia Silva",loveB:"FD",age:"20s",
+  twist:"\"Bush\" is a persona. His real name is Brandt; he hides it from his abusive biological father, Carl Bush.",twB:"FD",
+  story:"Quits the show and gives up the money rather than fake a scandal. Wins his only world title (91.5 points), retires, and proposes at Christmas.",conn:"Theo's rival; Julia's partner"},
+ {id:"julia",name:"Julia Silva",aka:"Theo's little sister",s:"el",role:"lead",books:"FD",
+  job:"Film-studies graduate; location consultant on Romance Ranch, later an assistant director",jobB:"FD",
+  feat:"Ambitious and careful. Avoids alcohol and dating after being drugged on a cruise two years earlier.",
+  love:"Emmett Brandt",loveB:"FD",age:"Early 20s",
+  twist:"Emmett is the stranger who saved her on that cruise. Neither has told a soul.",twB:"FD",story:"",conn:"Emmett's fiancée; Theo's sister"},
+ {id:"tina",name:"Tina Brandt",aka:"\"Oma\"",s:"el",role:"sup",books:"FD",job:"Runs Stal Brandt, the family sport-horse breeding farm",feat:"Warm, fierce and protective; raised her grandchildren after their parents died in a car crash.",love:"Leon Brandt",age:"70s",story:"",conn:"Emmett's grandmother"},
+ {id:"leon",name:"Leon Brandt",aka:"\"Opa\"",s:"el",role:"sup",books:"FD",job:"Runs the breeding farm with Tina",feat:"Stoic, kind, quietly afraid of losing the land.",love:"Tina Brandt",age:"70s",story:"",conn:"Emmett's grandfather"},
+ {id:"parker",name:"Parker Brandt",aka:"Emmett's older sister",s:"el",role:"sup",books:"FD",job:"Business student",feat:"Responsible and introspective; the one who helps Julia see the footage was faked.",love:"",age:"20s",story:"Heroine of Midnight Rush (2027): she runs for mayor to save the farm.",conn:"Emmett's sister"},
+ {id:"riley",name:"Riley Brandt",aka:"Emmett's younger sister",s:"el",role:"sup",books:"FD",job:"Aspiring Olympic show jumper",feat:"Outspoken and teasing.",love:"",age:"Late teens or 20s",story:"",conn:"Emmett's sister"},
+ {id:"evan",name:"Evan Brandt",aka:"Emmett's brother",s:"el",role:"sup",books:"FD",job:"Helps run the farm day to day",feat:"Sarcastic with a soft centre.",love:"",age:"20s",story:"",conn:"Emmett's brother"},
+ {id:"richard",name:"Richard Wadsworth",aka:"Romance Ranch showrunner",s:"el",role:"bad",books:"FD",job:"Executive producer",feat:"Ratings first, people last.",love:"",age:"Adult",
+  twist:"Secretly films the cast, including Emmett's cottage, and doctors footage to break Emmett and Julia up.",twB:"FD",story:"",conn:"Emmett and Julia's boss"},
+ {id:"carl",name:"Carl Bush",aka:"Emmett's biological father",s:"el",role:"bad",books:"FD",job:"Former rodeo rider",feat:"Verbally abusive; the reason Emmett reads a room so well.",love:"",age:"Older",story:"",conn:"Emmett's estranged father"},
+ {id:"evelyn",name:"Evelyn",aka:"Romance Ranch contestant",s:"el",role:"sup",books:"FD",job:"Contestant and would-be actor",feat:"Cast by the producers as the show's villain.",love:"",age:"20s",story:"",conn:"Contestant"}
+];
+
+/* Pronunciation: common readings, not official guidance */
+const PRON={billie:"BILL-ee",vaughn:"VAWN",cole:"KOHL",hank:"HANK BRANT",dermot:"DER-mut",mira:"MEER-uh",stefan:"STEF-on DAL-kuh",nadia:"NAH-dee-uh DAL-kuh",griffin:"GRIF-in sin-CLAIR",patrick:"kuh-SELL",victor:"FAIR-ing-tun",
+ harvey:"HAR-vee EE-tun",cade:"KAYD",rhett:"RET",beau:"BOH",violet:"VY-uh-lit",willa:"WILL-uh",summer:"SUM-er",luke:"LOOK",jasper:"JAS-per zher-VAY",sloane:"SLOHN WIN-thrup",winter:"WIN-ter",theo:"TAY-oh SIL-vuh (THEE-oh also common)",bailey:"BAY-lee YAN-sun (JAN-sun also common)",kip:"KIP",rob:"ROB",
+ ford:"FORD",rosie:"ROH-zee (Rosalie: ROH-zuh-lee)",cora:"KOR-uh",west:"WEST BEL-mont",skylar:"SKY-ler",tabitha:"TAB-ih-thuh",rhys:"REESE doo-PREE",milo:"MY-loh",bash:"BASH roo-SOH",gwen:"GWEN",tripp:"TRIP",clyde:"KLYDE",
+ emmett:"EM-it",julia:"JOO-lee-uh SIL-vuh",tina:"TEE-nuh (Oma: OH-muh)",leon:"LAY-on (Opa: OH-puh)",parker:"PAR-ker",riley:"RY-lee",evan:"EV-un",richard:"WADS-worth",carl:"KARL"};
+
+/* Connections: [a, b, type, label, book] */
+const EDGES=[
+ ["billie","vaughn","love","married","OR"],["billie","dd","ally","his trainer, later owner","OR"],["vaughn","cole","fam","brothers","OR"],["vaughn","dermot","fam","grandson","OR"],["cole","dermot","fam","grandson","OR"],
+ ["hank","dermot","friend","best friends","OR"],["hank","billie","friend","mentor","OR"],["billie","violet","friend","mentor and friend","OR"],["billie","mira","friend","friends","OR"],["stefan","vaughn","foe","racing rivals","OR"],
+ ["stefan","dd","foe","tried to buy him","OR"],["patrick","dd","foe","mistreated him","OR"],["victor","billie","fam","estranged father","OR"],
+ ["cole","violet","love","married","PF"],["mira","stefan","love","married","FR"],["stefan","nadia","fam","siblings","FR"],["stefan","griffin","friend","best friends","FR"],["nadia","griffin","love","married","FS"],["mira","nadia","ally","her boss at the clinic","FS"],
+ ["harvey","cade","fam","father","FL"],["harvey","rhett","fam","father","FL"],["harvey","beau","fam","father","FL"],["harvey","violet","fam","father","OR"],["harvey","jasper","fam","took him in","PO"],
+ ["cade","rhett","fam","brothers","FL"],["rhett","beau","fam","brothers","FL"],["cade","beau","fam","brothers","FL"],["violet","cade","fam","siblings","OR"],["violet","rhett","fam","siblings","OR"],["violet","beau","fam","siblings","OR"],
+ ["jasper","beau","friend","brothers by choice","PO"],["jasper","sloane","love","partners","PO"],["sloane","violet","fam","cousins and best friends","PO"],["sloane","robert","fam","father","PO"],["sloane","sterling","foe","ex-fiancé","PO"],
+ ["rhett","summer","love","married","FL"],["cade","willa","love","married","HE"],["cade","luke","fam","father and son","FL"],["willa","luke","fam","stepmum","HE"],["summer","willa","friend","best friends","FL"],
+ ["summer","winter","fam","half-sisters","FL"],["kip","summer","fam","father","FL"],["kip","winter","fam","father","FL"],["kip","rhett","ally","his agent","FL"],["rob","winter","foe","ex-husband","FL"],["rob","summer","foe","groomed her","FL"],
+ ["rhett","theo","friend","mentor","FL"],["theo","winter","love","married","RE"],["beau","bailey","love","engaged","HO"],["summer","bailey","ally","hires her","HO"],
+ ["rhett","emmett","foe","rivals","FL"],["emmett","summer","foe","bar run-in","FL"],["theo","emmett","foe","arch-rivals","FD"],
+ ["willa","ford","fam","siblings","WL"],["willa","fordsr","fam","father","HE"],["ford","fordsr","fam","father","WL"],["ford","rosie","love","married","WL"],["ford","cora","fam","father","WL"],["ford","west","friend","best friends","WL"],
+ ["rosie","west","fam","siblings","WL"],["west","emmy","fam","father","WL"],["west","oliver","fam","father","WL"],["west","skylar","love","engaged","WE"],["skylar","oliver","friend","songwriting partner","WE"],["skylar","ford","ally","records at Wild Rose","WE"],
+ ["tabitha","rhys","love","married","WS"],["tabitha","milo","fam","aunt and guardian","WS"],["rhys","milo","fam","guardian","WS"],["rosie","tabitha","friend","maid of honour","WS"],["doris","rhys","ally","married them","WS"],
+ ["bash","rhys","friend","best man","WS"],["bash","clyde","friend","kidney donor","WS"],["bash","ford","ally","built his studio","WL"],["bash","west","friend","bowling team","WS"],
+ ["bash","gwen","love","married","WC"],["bash","tripp","fam","father and son","WC"],["gwen","tripp","love","ex-boyfriend","WC"],["clyde","gwen","friend","yoga student, matchmaker","WC"],
+ ["emmett","julia","love","engaged","FD"],["julia","theo","fam","siblings","FD"],["julia","winter","fam","sisters-in-law","FD"],["tina","emmett","fam","grandmother","FD"],["leon","emmett","fam","grandfather","FD"],["tina","leon","love","married","FD"],
+ ["parker","emmett","fam","siblings","FD"],["riley","emmett","fam","siblings","FD"],["evan","emmett","fam","siblings","FD"],["carl","emmett","foe","abusive father","FD"],["richard","emmett","foe","blackmails him","FD"],["richard","julia","foe","her boss","FD"],["evelyn","emmett","ally","contestant","FD"],["parker","julia","friend","shows her the truth","FD"]
+];
+
+/* Family trees. FAMX = people without full character entries */
+const FAMILIES=[
+ {name:"The Eatons of Wishing Well Ranch",gens:[["harvey","eatonmom"],["willa","cade","rhett","summer","bailey","beau","violet","cole"],["luke","emma"]],
+  links:[["harvey","cade"],["harvey","rhett"],["harvey","beau"],["harvey","violet"],["eatonmom","cade"],["eatonmom","rhett"],["eatonmom","beau"],["eatonmom","violet"],["cade","luke"],["cade","emma"],["willa","emma"]],
+  spouse:[["harvey","eatonmom"],["willa","cade"],["rhett","summer"],["bailey","beau"],["violet","cole"]],
+  sib:[]},
+ {name:"Winthrops & Jasper",gens:[["robert","cordelia"],["sloane","jasper","jenny"]],
+  links:[["robert","sloane"],["cordelia","sloane"]],spouse:[["robert","cordelia"],["sloane","jasper"]],sib:[["jasper","jenny"]]},
+ {name:"Hamiltons & Silvas",gens:[["kip","winmum","loretta"],["winter","theo","julia"],["vivi"]],
+  links:[["kip","winter"],["winmum","winter"],["loretta","theo"],["loretta","julia"],["winter","vivi"],["theo","vivi"]],
+  spouse:[["kip","winmum"],["winter","theo"]],sib:[["theo","julia"]]},
+ {name:"The Hardings of Gold Rush Ranch",gens:[["dermot","ada"],["hardingmom"],["cole2","vaughn","billie"]],
+  links:[["dermot","hardingmom"],["ada","hardingmom"],["hardingmom","cole2"],["hardingmom","vaughn"]],spouse:[["dermot","ada"],["vaughn","billie"]],sib:[]},
+ {name:"Dalcas & Sinclaires",gens:[["stefan","mira","nadia","griffin"],["silas"]],
+  links:[["stefan","silas"],["mira","silas"]],spouse:[["stefan","mira"],["nadia","griffin"]],sib:[["stefan","nadia"]]},
+ {name:"Grants & Belmonts of Rose Hill",gens:[["fordsr","gemma","andy","greta"],["marilyn","ford","rosie","west","skylar"],["cora","emmy","oliver"]],
+  links:[["fordsr","ford"],["gemma","ford"],["andy","rosie"],["greta","rosie"],["andy","west"],["greta","west"],["ford","cora"],["marilyn","cora"],["west","emmy"],["west","oliver"]],
+  spouse:[["fordsr","gemma"],["andy","greta"],["ford","rosie"],["west","skylar"]],sib:[["rosie","west"]]},
+ {name:"Garrisons, Rousseaus & friends",gens:[["paul","lisa","cecilia"],["erika","tabitha","rhys","bash","gwen"],["milo","minka","tripp"]],
+  links:[["paul","erika"],["lisa","erika"],["paul","tabitha"],["lisa","tabitha"],["erika","milo"],["tabitha","minka"],["rhys","minka"],["cecilia","tripp"],["bash","tripp"]],
+  spouse:[["paul","lisa"],["tabitha","rhys"],["bash","gwen"]],sib:[["erika","tabitha"]]},
+ {name:"The Brandts of Stal Brandt",gens:[["leon","tina"],["brandtparents","carl"],["parker","emmett","evan","riley"]],
+  links:[["leon","brandtparents"],["tina","brandtparents"],["brandtparents","parker"],["brandtparents","emmett"],["brandtparents","evan"],["brandtparents","riley"],["carl","emmett"]],
+  spouse:[["leon","tina"]],sib:[]}
+];
+/* Bonds between trees, shown in the side panel only */
+const CROSS=[["summer","winter","ally",["Half-sister","Half-sister"]],["summer","kip","fam",["Father","Daughter"]],["willa","ford","ally",["Brother (Rose Hill)","Sister (Chestnut Springs)"]],["willa","fordsr","fam",["Father","Daughter"]],["julia","emmett","love",["Partner","Partner"]],["violet","sloane","ally",["Cousin","Cousin"]],["jasper","harvey","fam",["Took him in","Took in as a teen"]],["cole2","violet","love",["Wife","Husband"]],["sloane","harvey","fam",["Uncle","Niece"]]];
+const FAMX={
+ eatonmom:{name:"Mrs. Eaton",note:"Died in childbirth",dead:true},
+ emma:{name:"Emma Eaton",note:"Cade & Willa's daughter",b:"HE"},
+ cordelia:{name:"Cordelia Winthrop",note:"Sloane's mother"},
+ jenny:{name:"Jenny Gervais",note:"ATV accident as a child",dead:true},
+ winmum:{name:"Winter's mother",note:"Kip's wife"},
+ loretta:{name:"Loretta Silva",note:"Theo & Julia's mum"},
+ vivi:{name:"Vivi Silva",note:"Winter & Theo's daughter",b:"RE"},
+ ada:{name:"Ada Harding",note:"Dermot's wife"},
+ hardingmom:{name:"Mrs. Harding",note:"Vaughn & Cole's mother"},
+ cole2:{name:"Cole Harding",note:"Also in the Eaton tree"},
+ silas:{name:"Silas Dalca",note:"Mira & Stefan's son",b:"FS"},
+ gemma:{name:"Gemma Grant",note:"Ford & Willa's mother"},
+ andy:{name:"Andy Belmont",note:"Rosie & West's dad"},
+ greta:{name:"Greta Belmont",note:"Rosie & West's mum"},
+ marilyn:{name:"Marilyn Holland",note:"Cora's mother"},
+ paul:{name:"Paul Garrison",note:"Tabitha's father"},
+ lisa:{name:"Lisa Garrison",note:"Tabitha's mother"},
+ erika:{name:"Erika Garrison",note:"Milo's mother",dead:true},
+ minka:{name:"Minka Garrison",note:"Tabitha & Rhys's daughter",b:"WS"},
+ cecilia:{name:"Cecilia Coleman",note:"Tripp's mother"},
+ brandtparents:{name:"The Brandt parents",note:"Died in a car crash",dead:true}
+};
+
+/* The four series / towns */
+const TOWNS=[
+ {id:"town-grr",s:"grr",b:"OR",name:"Ruby Creek, British Columbia",hub:"Gold Rush Ranch",
+  d:"A horse-racing town in BC. Gold Rush Ranch belongs to the Harding family and sits next to Stefan Dalca's rival ranch, Cascade Acres. The series is about racehorses rather than rodeo, and it's where Violet Eaton works, which is how the Eatons first appear.",
+  places:[["Gold Rush Ranch","The Harding family's racing ranch; Billie, Violet, Mira and later Griffin all work here.","OR"],["Cascade Acres","Stefan's rival racing ranch, which he bought from Griffin.","OR"],["Mira's vet clinic","On the ranch; Nadia works here as a vet tech.","OR"],["The Denman Derby","The big race DD wins, twice.","OR",1],["Neighbor's Pub","Where Griffin admits his addiction after Tommy Koss mocks him.","FS"],["Wildflower Racehorse Rescue","The hilltop barn and paddocks Griffin builds for Nadia.","FS",1]]},
+ {id:"town-cs",s:"cs",b:"FL",name:"Chestnut Springs, Alberta",hub:"Wishing Well Ranch",
+  d:"A small ranching town near Calgary. Everything orbits Wishing Well Ranch and the Eaton family: four siblings, their dad Harvey, and Jasper, the boy they took in. Bull riding takes the cast on the road to Las Vegas.",
+  places:[["Wishing Well Ranch","The Eaton family cattle ranch; Cade runs it, everyone comes home to it.","FL"],["The Railspur","The local bar where Bailey works, and which Beau secretly owns.","HO",1],["Hamilton Athletics","Summer's gym, where Sloane practises ballet and Bailey later works.","FL"],["Calgary","The nearby city: Kip's hospital stay, and Jasper's team, the Grizzlies.","FL"],["Las Vegas","The bull-riding World Finals.","FL"]]},
+ {id:"town-rh",s:"rh",b:"WL",name:"Rose Hill, British Columbia",hub:"Wild Rose Records",
+  d:"A mountain lake town in the Rockies, somewhere between Vancouver and Calgary. The series follows the single dads of the town's rec bowling team, Dads' Night Out: Ford, West, Rhys and Bash.",
+  places:[["Wild Rose Records","Ford's studio and label in a converted barn (first called Rose Hill Records).","WL"],["Rosie's dock","On the lake below Ford's land; he eventually gives it to her.","WL",1],["The Belmont property","West's house and the bunkhouse where Rosie, then Skylar, stay.","WL"],["Bighorn Bistro","Tabitha's restaurant.","WE"],["Doris's bar","Where Tabitha and Rhys get married.","WS"],["The bowling alley","Home of the Dads' Night Out team, champions in Wild Card's epilogue.","WL",1],["Clyde's house","Full of memories of Maya; Gwen drives into a wildfire to save it.","WC",1]]},
+ {id:"town-el",s:"el",b:"FS",name:"Emerald Lake, British Columbia",hub:"Stal Brandt",
+  d:"A lake town in the Cascade Valley, home to the Brandt family's struggling sport-horse farm and to the Silva family. It gets name-dropped in earlier books before its own series begins.",
+  places:[["Stal Brandt","Three generations of Brandt sport-horse breeding, facing bankruptcy.","FD"],["Emmett's cottage","In a back corner of the farm; Richard hides a camera in it.","FD",1],["Prickle Point","A trail near Emmett's cottage; the cactus-covered first date.","FD"],["The Romance Ranch set","An old bunkhouse converted into the show's main set.","FD"],["Emerald Lake vet school","Where Nadia tops her class.","FS"],["Rhys's rental","Where Erika lived with Milo before Wild Side.","WS"]]}
+];
+
+/* Map pins on the schematic (x,y in a 680x460 box) */
+const PLACES=[
+ {id:"pl-van",name:"Vancouver",x:96,y:372,b:"OR",d:"The real city on the coast. Rosie's old job, and the airport where Bash and Gwen get snowed in."},
+ {id:"pl-ruby",name:"Ruby Creek",x:170,y:356,b:"OR",d:"Gold Rush Ranch country, inland from Vancouver."},
+ {id:"pl-rose",name:"Rose Hill",x:330,y:318,b:"WL",d:"Mountain lake town between Vancouver and Calgary."},
+ {id:"pl-emerald",name:"Emerald Lake",x:420,y:252,b:"FS",d:"Cascade Valley lake town near the Rockies; Stal Brandt."},
+ {id:"pl-cal",name:"Calgary",x:548,y:268,b:"FL",d:"The real city: hospitals, hockey and the airport."},
+ {id:"pl-chestnut",name:"Chestnut Springs",x:530,y:318,b:"FL",d:"Ranch country in the Alberta foothills; Wishing Well Ranch."}
+];
+
+/* Timeline: when, title, detail, book (spoiler level), isBook */
+const TIMELINE=[
+ ["Years before","Jasper comes to Wishing Well Ranch","Beau finds him living in his car and brings him home; Harvey takes him in.","PO"],
+ ["Years before","Rob Valentine operates on teenage Summer","He grooms her as her surgeon, then marries her half-sister Winter.","FL"],
+ ["About 10 years before","Victor Farrington's scandal","Billie disappears from public life.","OR"],
+ ["Before the series","Dermot Harding dies","Vaughn takes leave from the family mining company to run Gold Rush Ranch.","OR"],
+ ["2021","Off to the Races","Billie arrives at Gold Rush Ranch.","OR",1],
+ ["Ruby Creek","DD wins the Denman Derby","Then the almost-sale to Stefan, and Billie's one-dollar horse.","OR"],
+ ["2021","A Photo Finish","Cole moves to Ruby Creek; Violet loses her season to a fall.","PF",1],
+ ["2021","The Front Runner","Three dates for one foal.","FR",1],
+ ["Two years before A False Start","Nadia kisses a stranger in a bar","He's Griffin Sinclaire.","FS"],
+ ["2022","A False Start","Billie is on bed rest; Mira and Stefan have a son.","FS",1],
+ ["2022","Flawless","Summer babysits Rhett to the Vegas finals.","FL",1],
+ ["Las Vegas","Rhett walks out of the chute","He chooses Summer over another buckle.","FL"],
+ ["2022","Heartless","Willa nannies Luke for the summer.","HE",1],
+ ["2023","Powerless","Sloane runs from her wedding; Beau is missing on a mission.","PO",1],
+ ["Nine months on","Theo meets his daughter","Winter's messages never reached him.","RE"],
+ ["2023","Reckless","Winter and Theo.","RE",1],
+ ["2023","Hopeless","Beau is home; the fake engagement. Epilogue: Cade and Willa's wedding.","HO",1],
+ ["2024","Wild Love","Ford's studio opens; Cora arrives; Rosie comes home.","WL",1],
+ ["2024","Wild Eyes","Skylar hides out in West's bunkhouse.","WE",1],
+ ["2025","Wild Side","Tabitha and Rhys marry at Doris's bar.","WS",1],
+ ["Months before Wild Card","The Vancouver airport night","Bash mistypes Gwen's number.","WC"],
+ ["2025","Wild Card","Ends with the bowling championship and a lavender plane.","WC",1],
+ ["Two years before Fever Dream","The cruise","Emmett stops a man who drugged Julia's drink.","FD"],
+ ["2026","Fever Dream","Romance Ranch films at Stal Brandt; Theo is a two-time champion.","FD",1],
+ ["April 2027","Midnight Rush","Emerald Lake book 2: Parker Brandt for mayor.","FD",1]
+];
+
+/* ============ RECAPS (my own summaries) ============ */
+const RECAPS={
+ OR:{start:"Billie Black left the racing world a decade ago after her father, a former prime minister, went down in a sex scandal. Now she's back, applying for the head trainer job at Gold Rush Ranch in Ruby Creek. Its owner, Vaughn Harding, is grieving his grandfather Dermot and dealing with race-fixing rumours.",
+  events:["Vaughn first mistakes Billie for a date his mother set up. They clash immediately.","He gives her three months to rehabilitate Double Diablo (\"DD\"), the ranch's most difficult horse. If she can't, she doesn't get the job.","Billie wins DD over with patience, leans on stable manager Hank Brandt, and befriends groom Violet Eaton and vet Mira Thorne.","Cole Harding hires jockey Patrick Cassel, who mistreats DD. Violet ends up riding him.","Billie and Vaughn fall into bed, then fall apart when she sees a text from his mother about a gala date. He cancels it, confronts his mother and tells Billie how he feels.","DD wins the Denman Derby. Then Billie overhears Vaughn agreeing to sell DD to Stefan Dalca for $20 million in exchange for clearing Dermot's name. She leaves."],
+  end:"A letter from Dermot confirms he really was involved in the scandal, so Vaughn cancels the sale. He signs DD over to Billie for one dollar. Renamed Mister Black, DD wins the next Denman Derby in Billie's colours, Vaughn declares his love in the crowd, and he proposes.",
+  remember:["Billie and Vaughn are together; DD is now Billie's horse, Mister Black.","Violet Eaton is a groom who wants to be a jockey. She has four overprotective brothers back home.","Vaughn's brother Cole is ex-military and all business.","Stefan Dalca is everyone's favourite villain. Mira Thorne is the ranch vet he keeps asking out."]},
+ PF:{start:"Violet Eaton has just been promoted to jockey at Gold Rush Ranch. For about a year she had an anonymous online friendship with a man she never met, and then she ghosted him.",
+  events:["Cole Harding, Vaughn's older brother and a former soldier, moves to Ruby Creek for the family business. He's guarded, reclusive and now, effectively, her boss.","Cole realises Violet is his anonymous online friend. She has no idea.","A riding accident sidelines Violet, and she ends up living under Cole's roof.","Forced proximity, an age gap and a lot of tension. Her brothers are not thrilled.","Cole's PTSD and his childhood trauma come to the surface. He's convinced his problems will hurt her and that she'll leave once she learns what he's hiding.","Violet refuses to let him hide, and pushes him to face what happened to him."],
+  end:"The truth about who he is comes out, Cole lets her in, and they get their happy ending. Later books show them married and living at Gold Rush Ranch.",
+  remember:["Violet and Cole are together.","Violet is the Eaton sister. Her family is the heart of Chestnut Springs.","Billie and Vaughn are still going strong."]},
+ FR:{start:"Mira Thorne, 27, is the large-animal vet at Gold Rush Ranch. Stefan Dalca, 34, owns rival ranch Cascade Acres and has asked her out for years. She always says no, and her friends would be horrified if she didn't.",
+  events:["A struggling foal needs help that only Stefan can provide.","His price is three dates, with rules: no touching, no telling anyone, no falling in love.","Over those dates Mira sees a kinder side of him, and a painful past.","Her friends at Gold Rush don't approve, and Mira hides how she feels.","Secrets on both sides come out and blow things up."],
+  end:"Stefan admits his feelings and they choose each other. By A False Start they're married with a son, Silas.",
+  remember:["Stefan is a good guy now. Mira and Stefan are together.","Stefan has a much younger sister, Nadia, and a best friend, ex-quarterback Griffin Sinclaire."]},
+ FS:{start:"Nineteen-year-old Nadia Dalca, just accepted into a vet tech program, asks a bearded stranger in a Ruby Creek bar for a congratulations kiss. It's electric. He refuses a second one and walks out. He's Griffin Sinclaire, her brother Stefan's best friend.",
+  events:["Two years later Nadia works at Mira's clinic on Gold Rush Ranch. Griffin arrives to break young horses for the summer and avoids her.","Griffin's football career ended with a brain injury that left him with a stutter. He's a recovering alcoholic who has never had therapy. Around Nadia, the stutter fades.","He gives her riding lessons while Billie is on bed rest. They rescue a lame racehorse, Cowboy, from slaughter.","Nadia tells him about her violent, alcoholic father. Griffin admits his addiction after Tommy Koss mocks him. They kiss, and he pulls back.","Griffin introduces her to his parents. She applies late to vet school at Emerald Lake. They sleep together at his mountain property.","He confesses he loves her, then that he got drunk-married in Las Vegas to a woman named Tonya, who is now demanding money.","Nadia tells both Griffin and Stefan to stop centring themselves. She and Griffin take a painful break."],
+  end:"Griffin does 28 days of rehab with real therapy and speech therapy, and sends Nadia wildflower seed packets. She tops her class at vet school. His last envelope leads her to the Wildflower Racehorse Rescue he built for her. Three years later he proposes in Costa Rica, and keeps proposing every year after they marry.",
+  remember:["Nadia studies at Emerald Lake, the town that gets its own series later.","Gold Rush Ranch is a family now: Billie and Vaughn, Violet and Cole, Mira and Stefan with baby Silas, Nadia and Griffin."]},
+ FL:{start:"Rhett Eaton, 32, two-time world champion bull rider, is caught on video mocking his dairy sponsors and then punches a reporter. His agent, Kip Hamilton, assigns his daughter Summer, 25, to babysit him for the eight weeks before the World Finals.",
+  events:["Summer moves onto Wishing Well Ranch in Chestnut Springs. Rhett is hostile; his dad Harvey and brothers Cade and Beau are delighted by the show.","She patches him up after a bull attack. A broken hotel heater means sharing a bed and trading secrets.","Summer has a scar from heart surgery as a child, and she's the result of Kip's affair with the nanny.","After Rhett defends her from rival rider Emmett Bush at a bar, they sleep together.","Kip has a heart attack. At the Calgary hospital they meet Summer's half-sister Winter and her husband, Rob Valentine, the surgeon who groomed Summer as a teen. Rhett exposes him and punches him in the lobby.","Summer, feeling her private pain has become a spectacle, pulls away. Rhett saves his protégé Theo Silva from a bull and cracks his ribs."],
+  end:"At the Vegas finals Rhett realises he's more afraid of a life without Summer than of the bull. He walks away mid-event and into her arms. A year later he coaches for the federation, she runs her own gym, and he proposes by tracing the words across her freckles.",
+  remember:["Rhett and Summer are engaged. Summer runs Hamilton Athletics.","Summer and Winter are estranged half-sisters. Rob Valentine is a predator.","Summer's best friend is Willa Grant.","Theo Silva is Rhett's protégé. Emmett Bush is the rival to watch."]},
+ HE:{start:"Cade Eaton, the eldest Eaton brother, is raising five-year-old Luke alone after Luke's mother left. Every nanny candidate seems more interested in him than in his son.",
+  events:["His family pushes him to hire Summer's best friend, Willa Grant, 25, a former show jumper whose plans fell apart when her horse was hurt. Luke loves her instantly.","He likes order; she likes pancakes, singing and mischief.","In the hot tub he learns she's actually a bartender with no childcare training. Her honesty disarms him.","Jealousy at the local bar, a heated dance, truth or dare. Willa pushes Cade back into rodeo.","They give in. Cade admits he's afraid of not being enough.","Cade hurts his hand; Willa finds out she's pregnant and pulls away, afraid he'll feel trapped again."],
+  end:"Luke misses Willa desperately. When she comes back, Cade shows her the sidewalk hearts he and Luke decorated: she's wanted, not an obligation. Cade rides at the Canadian Championship Rodeo and kisses her in the arena. Epilogue: Luke asks to call her \"Mom\" and their daughter Emma is born.",
+  remember:["Cade and Willa are together with Luke and baby Emma (they marry in Hopeless' epilogue).","Willa's dad is rock star Ford Grant Sr., and her brother Ford stars in Wild Love."]},
+ PO:{start:"Ten-year-old Sloane Winthrop spent a summer at Wishing Well Ranch with her Eaton cousins and met Jasper Gervais, the boy the Eatons took in. Years later she's a professional ballerina about to marry Sterling Woodcock, the man her father chose.",
+  events:["Jasper, now an NHL goalie, asks her the night before whether she's happy. It turns into a fight.","On the wedding day, a video of Sterling cheating at his stag party arrives. Sloane feels relief.","Jasper throws Sterling out of the bridal suite; the Eatons stage a diversion and Jasper gets her out barefoot.","They hide out at the ranch. Old feelings surface, and Jasper wrestles with believing he deserves her.","Beau goes missing on a military mission. Jasper's game falls apart and he's suspended.","A road trip into the mountains to fetch hay for Violet finally gets them together."],
+  end:"Sloane's father threatens her career and Jasper's reputation to pull her back. She chooses her own life, and Jasper. They make a home in Chestnut Springs.",
+  remember:["Jasper and Sloane are together.","Beau's disappearance hangs over the family (Hopeless picks up after he's home).","Violet and Cole visit from Gold Rush Ranch."]},
+ RE:{start:"Dr. Winter Hamilton's husband, Rob, was having an affair with her half-sister Summer, groomed while she was his patient. After a miscarriage and a divorce, Winter moves to Chestnut Springs to rebuild her life.",
+  events:["Young bull rider Theo Silva isn't scared off by her ice-queen act.","One night together, sealed with a napkin contract to keep it secret.","Winter discovers she's pregnant. Her calls and messages never reach Theo; his team screened them.","She raises baby Vivi alone while slowly mending things with Summer.","Theo comes back and realises Vivi is his. He moves in next door and shows up for night feeds.","Rob sues for a paternity test, and the doubt gets to Theo. Winter flies to Montana to have it out with him."],
+  end:"DNA confirms Theo is Vivi's dad and her surname becomes Silva. Theo wins his championship. Winter and Summer report Rob to the medical board. At Vivi's first birthday, Kip gives Winter her childhood dollhouse and Theo proposes. Epilogue: baby number two is on the way.",
+  remember:["Theo and Winter are engaged with Vivi; Winter and Summer are close again.","Theo has a younger sister, Julia, the heroine of Fever Dream."]},
+ HO:{start:"Beau Eaton is home in Chestnut Springs after his ordeal overseas, a war hero who can't sleep and drinks too much. Night after night he ends up at The Railspur, where Bailey Jansen treats him like neither a hero nor a broken man.",
+  events:["She swaps his whisky for chamomile tea; he starts walking her to her car.","He throws her brothers and their friend Seth out after Seth assaults her.","He bets nobody in town holds her surname against her, and proposes a fake engagement: no sex, limited public affection, a quiet breakup later.","When her brothers threaten her, Beau moves her trailer onto his land. The Eatons welcome her and fake turns real.","Bailey discovers Beau secretly bought The Railspur years ago to protect her job, feels controlled, and leaves."],
+  end:"Bailey plans a future beyond town, with a job from Summer and studies in kinesiology. Beau reveals he's quietly been hired by the fire department in the city. They promise honesty and build a life together. Epilogue: Cade and Willa's wedding, with Bailey at Beau's side.",
+  remember:["Every Eaton is paired up: Cade & Willa, Rhett & Summer, Beau & Bailey, Violet & Cole, plus Jasper & Sloane.","That's the end of Chestnut Springs. Willa's brother Ford takes over in Rose Hill."]},
+ WL:{start:"Rosie Belmont is assaulted by her boss in Vancouver and then fired. She leaves her boyfriend and goes home to Rose Hill. Her brother West's best friend and her childhood nemesis, Ford Grant, is back too, opening a recording studio.",
+  events:["Ford has secretly had feelings for Rosie for about a decade.","Twelve-year-old Cora turns up: Ford's daughter from a sperm-bank donation. Her mother, Marilyn, needs treatment for depression, so Ford takes Cora in.","Rosie becomes his office manager and turns a barn into an office. She helps Ford reach Cora through music.","Ford reveals he rescued Rosie's teenage diary from a ditch and never read it. She leaves him torn-out pages that prove she never really hated him.","They start sleeping together and hide it from West.","Ford tells West about the assault without asking Rosie. West punches her ex-boss Stan and lands in jail; Rosie is furious with Ford."],
+  end:"Ford makes amends by giving her the dock she's always claimed and offering her a partnership in Wild Rose Records. Marilyn recovers and moves to Rose Hill. Cora calls Ford \"Dad\". Epilogue: Ford proposes.",
+  remember:["Ford and Rosie are together and run Wild Rose Records.","West is a divorced dad of two (Emmy and Oliver) with a bunkhouse to spare.","Contractor Sebastian, aka Bash, built the studio. Remember him."]},
+ WE:{start:"Country star Skylar Stone flees Los Angeles after a public humiliation, having realised her father and agent control her money and her life. Her first encounter in Rose Hill is with a grizzly, and with West Belmont, who rescues her.",
+  events:["She's meant to record at Wild Rose Records but lands in West's bunkhouse, hopeless at chores and suspicious of people who don't want anything from her.","West, divorced and protective of his kids, keeps it to friendship. Emmy and Oliver adopt her anyway; a mouse in the bunkhouse moves her into his house.","He throws her phone in the water mid-spiral, and the quiet helps.","A nighttime canoe ride ends the friends-only rule.","At the studio she starts writing her own songs; Oliver gives her a first line.","Her private photos to West are leaked. She decides she's bad for his family and leaves once the album is done."],
+  end:"On live TV she refuses to apologise and fires her father and agent; Ford reveals her father leaked the photos. West flies to LA for the awards, where she wins Song of the Year for \"Photosynthesis\" and says she wants a life with him. A year later West proposes on the road where they met.",
+  remember:["West and Skylar are together; Skylar lives in Rose Hill.","Tabitha, the chef at Bighorn Bistro, and meddling bar owner Doris are around town."]},
+ WS:{start:"Two years ago, chef Tabitha Garrison made Rhys Dupris, her sister Erika's landlord, promise to call if Erika struggled. Erika has died of an overdose, and her will names Rhys, not Tabitha, as guardian of three-year-old Milo.",
+  events:["Tabitha blames Rhys, believing he evicted Erika. Rhys arrives to take Milo to Florida, as the will says.","Rhys is also the masked wrestler \"Wild Side\". Seeing Tabitha's love for Milo and the town around them, he hesitates.","His visa is in trouble, which would cost him Canada and Milo. Tabitha proposes a marriage of convenience; Doris marries them at the bar.","Rhys joins the bowling team, builds Lego dinosaurs with Milo and turns up at the bistro.","Erika's recovery journals reveal Rhys never evicted her. He'd given her rent breaks and childcare and let Tabitha hate him because she needed someone to blame.","At a 70,000-seat event he has Tabitha unmask him in the ring."],
+  end:"A rival's botched move leaves Rhys with a spinal injury and temporarily unable to walk. Tabitha sees him through recovery and he realises he belongs with them. He takes the Garrison name. Four years later: daughter Minka, retirement, Rose Hill.",
+  remember:["Tabitha and Rhys are married with Milo and later Minka.","Bash was Rhys's best man and is donating a kidney to Clyde.","Bash has a crush on a yoga teacher named Gwen."]},
+ WC:{start:"Snowed in at Vancouver airport, fire pilot Bash Rousseau, 40, spends the night with yoga teacher Gwen Dawson, 27. He mistypes her number. For eight months each thinks the other didn't want to call.",
+  events:["Bash learns he has a 24-year-old son, NHL player Tripp Coleman, whose mother hid the pregnancy. He starts building a relationship with him.","At Tripp's birthday party Bash meets Tripp's girlfriend. It's Gwen. The wrong number comes to light.","Gwen ends it with Tripp and moves to Rose Hill for a yoga job.","Bash gives a kidney to Clyde, who arranges for Gwen to be Bash's live-in aide while he recovers.","They share their histories: her emotionally abusive father, his burnout. On her birthday he flies her somewhere private and they give in.","Tripp finds out, and the fight exposes the lies he was told about his father."],
+  end:"A wildfire hits Rose Hill. After a fight, Gwen drives into the evacuation zone to save Clyde's house; Bash spots her truck from the air and pulls off a dangerous rescue. They confess their love, and Tripp gives his blessing. Epilogue: the bowling team wins, they marry and are expecting a girl, and Bash paints his plane lavender and names it Wild Card.",
+  remember:["That's the end of Rose Hill: Ford & Rosie, West & Skylar, Rhys & Tabitha, Bash & Gwen.","Rhys once owned a property in Emerald Lake, where the next series is set."]},
+ FD:{start:"Bull rider Emmett Bush, Theo Silva's biggest rival, signs on as the bachelor of reality show Romance Ranch for $500,000. The money will save Stal Brandt, his grandparents' failing sport-horse farm in Emerald Lake, where the show films. His real surname is Brandt.",
+  events:["The location consultant is Julia Silva, Theo's little sister. Two years ago on a cruise, Emmett stopped a man who drugged her drink and kept her safe. Neither has told anyone.","Julia meets Oma Tina and Opa Leon; Emmett's siblings Parker, Riley and Evan circle.","Showrunner Richard Wadsworth wants a playboy and pushes staged drama, especially with the contestant cast as villain, Evelyn.","A cactus-covered first date at Prickle Point turns into a secret affair.","Emmett tells Julia about his abusive biological father, Carl Bush, and why he rides under the Bush name.","Richard has been secretly filming, including Emmett's cottage. He blackmails Emmett for drama, and when Emmett refuses, shows Julia doctored footage of him with Evelyn."],
+  end:"Emmett quits and gives up the money. Parker helps Julia see the footage is fake, and they reconcile. A lawyer shows the illegal surveillance voids the contract; the network pays the Brandts in full and the show is cancelled. Nine months later Julia is an assistant director on a docuseries about Emmett's last season. He wins his first and only world title with 91.5 points and retires. Two years later he proposes at Christmas by the farmhouse fire.",
+  remember:["Emmett and Julia are engaged; the farm is safe for now.","Parker Brandt is up next in Midnight Rush (April 2027), running for mayor."]}
+};
+
+/* How the series connect (Connections Map tab) */
+const XOVER=[
+ {a:"grr",b:"cs",bk:"PF",t:"Violet Eaton works at Gold Rush Ranch",d:"Harvey Eaton's only daughter is a groom, then a jockey, in Ruby Creek. She marries Cole Harding (A Photo Finish), which makes the Hardings Eaton in-laws."},
+ {a:"grr",b:"cs",bk:"PO",t:"Gold Rush cameos in Chestnut Springs",d:"Billie, Vaughn, Violet and Cole turn up in Powerless when Sloane and Jasper pass through Gold Rush Ranch."},
+ {a:"cs",b:"rh",bk:"WL",t:"Willa and Ford Grant are siblings",d:"Cade's wife Willa (Heartless) is the big sister of Wild Love's Ford Grant, and their dad is rock star Ford Grant Sr. Willa is also Summer's best friend."},
+ {a:"cs",b:"el",bk:"RE",t:"The Silvas",d:"Theo Silva (Reckless) is Julia Silva's big brother and Emmett's arch-rival in Fever Dream. Winter is Julia's sister-in-law."},
+ {a:"cs",b:"el",bk:"FL",t:"Emmett, the rival from Flawless",d:"The cocky bull rider who picks a fight with Summer at a bar in Flawless is the hero of Fever Dream. The bull-riding circuit ties Rhett, Theo and Emmett together."},
+ {a:"grr",b:"el",bk:"FS",t:"Nadia goes to vet school in Emerald Lake",d:"In A False Start, Nadia Dalca studies at Emerald Lake, years before the town gets its own series."},
+ {a:"rh",b:"el",bk:"WS",t:"Rhys's Emerald Lake property",d:"Before Wild Side, Rhys Dupris rented his Emerald Lake property to Tabitha's sister Erika and her son Milo."},
+ {a:"rh",b:"rh",bk:"WC",t:"Bash was there from the start",d:"Sebastian, the contractor who builds Ford's studio in Wild Love, is Bash Rousseau, the hero of Wild Card."},
+ {a:"grr",b:"el",bk:"FD",t:"Two horse families called Brandt",d:"Gold Rush Ranch's head groom is Hank Brandt; Fever Dream's family runs Stal Brandt. Same surname, same horse world. As far as this guide knows, a link hasn't been confirmed."}
+];
+
+/* ============ HELPERS ============ */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const C=Object.fromEntries(CHARS.map(c=>[c.id,c]));
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ============ SPOILER SHIELD ============
+   Level L = reading book L in the recommended order (0 Off to the Races … 13 Fever Dream); 14 = show everything.
+   Premises and items from books you haven't started are blurred. Twists stay blurred until their book is finished.
+   Any detail that names a later book is held back until that book is finished. */
+const MAXL=BOOKLIST.length;
+const BMENT=[[/Off to the Races/,0],[/A Photo Finish|Photo Finish/,1],[/The Front Runner|Front Runner/,2],[/A False Start|False Start/,3],[/Flawless/,4],[/Heartless/,5],[/Powerless/,6],[/Reckless/,7],[/Hopeless/,8],[/Wild Love/,9],[/Wild Eyes/,10],[/Wild Side/,11],[/Wild Card/,12],[/Fever Dream|Midnight Rush/,13]];
+let spLevel=store.get("silverSpoiler",null);
+const SPK=new Set();
+const PL=()=>spLevel===null?0:spLevel;
+const ALL=()=>PL()>=MAXL;
+const bi=b=>BIDX[b]??0;
+const firstBook=b=>{const xs=String(b||"OR").split(" ").map(x=>BIDX[x]).filter(x=>x!==undefined);return xs.length?Math.min(...xs):0};
+const mention=t=>{let m=-1;const s=String(t||"");BMENT.forEach(([re,i])=>{if(i>m&&re.test(s))m=i});return m};
+const later=t=>mention(String(t||"").replace(/Off to the Races/g,""));
+const hideItem=f=>!ALL()&&f>PL();
+const hideField=r=>!ALL()&&r>=0&&r>=PL();
+const risk=(text,base)=>Math.max(base??-1,later(text));
+function sp(hide,key,html,tag){if(!hide||SPK.has(key))return html;tag=tag||"span";return `<${tag} class="sp-hidden" data-spk="${key}" title="Spoiler: tap to reveal">${html}</${tag}>`}
+
+/* names: a character can go by another name until their reveal */
+const dispName=c=>c.alt&&hideItem(bi(c.nameB))?c.alt:c.name;
+const nm=id=>C[id]?dispName(C[id]):FAMX[id]?.name||id;
+const SHORTN={dd:"DD",fordsr:"Ford Sr.",cole2:"Cole"};
+const short=id=>SHORTN[id]||nm(id).replace(/^(Dr\. )/,"").split(" ")[0];
+const serName=s=>SERIES[s]?.name||"Elsewhere";
+const sw=s=>`<span class="swatch" style="background:${SERCOL[s]||SERCOL.other}"></span>`;
+const ROLE={lead:["Main character","good"],sup:["Supporting","grey"],bad:["Antagonist","bad"]};
+const alignPill=a=>`<span class="pill p-${ROLE[a][1]}">${ROLE[a][0]}</span>`;
+const statusPill=s=>s==="dead"?`<span class="pill p-dead">Deceased</span>`:"";
+const bookTag=b=>b.split(" ").map(x=>BOOKS[x]).join(" · ");
+function charLink(id){return C[id]?`<button class="lnk" data-go="char:${id}">${esc(nm(id))}</button>`:esc(nm(id))}
+
+/* spoiler dialog options, grouped by series */
+(function(){let h="",last="";
+ BOOKLIST.forEach((b,i)=>{if(b.s!==last){h+=`<p class="opt-h">${esc(SERIES[b.s].name)}</p>`;last=b.s}
+  h+=`<button type="button" data-lv="${i}"><b>${i===0?"I'm new, or reading ":"Reading "}${esc(b.title)}</b><span>${i===0?"Hide everything after the first page":"Finished "+esc(BOOKLIST[i-1].title)}</span></button>`});
+ h+=`<p class="opt-h">All caught up</p><button type="button" data-lv="${MAXL}"><b>I've finished Fever Dream, or don't mind spoilers</b><span>Show everything</span></button>`;
+ $("#spd-opts").innerHTML=h})();
+const LVLAB=i=>i>=MAXL?"Showing everything":"Reading "+BOOKLIST[i].title;
+function spStrip(){$("#sp-strip").innerHTML=ALL()?`<span>Spoilers: <b>${LVLAB(MAXL)}</b></span><button class="lnk" data-open-sp>Change</button>`:`<span>Spoilers: <b>${esc(LVLAB(PL()))}</b>. Blurred items come from books you haven't finished. Tap one to peek.</span><button class="lnk" data-open-sp>Change</button>`;
+ document.querySelectorAll("#spd-opts [data-lv]").forEach(b=>b.classList.toggle("cur",+b.dataset.lv===PL()))}
+document.addEventListener("click",e=>{const el=e.target.closest(".sp-hidden");if(!el)return;e.preventDefault();e.stopPropagation();
+ const k=el.dataset.spk;SPK.add(k);el.classList.remove("sp-hidden");el.querySelectorAll(".sp-hidden").forEach(c=>{SPK.add(c.dataset.spk);c.classList.remove("sp-hidden")});
+ document.querySelectorAll(`[data-sp-for="${k}"]`).forEach(n=>n.remove())},true);
+document.addEventListener("click",e=>{const r=e.target.closest("[data-reveal]");if(!r)return;const t=document.querySelector(`[data-spk="${r.dataset.reveal}"]`);if(t)t.click()});
+const spd=document.getElementById("spd");
+function openSp(){if(typeof spd.showModal==="function")spd.showModal();else spd.setAttribute("open","")}
+function closeSp(){if(spd.open){typeof spd.close==="function"?spd.close():spd.removeAttribute("open")}}
+document.addEventListener("click",e=>{if(e.target.closest("#sp-open,[data-open-sp]"))openSp()});
+document.getElementById("spd-opts").addEventListener("click",e=>{const b=e.target.closest("[data-lv]");if(!b)return;spLevel=+b.dataset.lv;store.set("silverSpoiler",spLevel);SPK.clear();closeSp();spStrip();show(current)});
+spd.addEventListener("cancel",()=>{if(spLevel===null){spLevel=0;store.set("silverSpoiler",0);spStrip()}});
+function coverStage(key,what){if(ALL()||SPK.has(key))return;const s=document.querySelector("#view .split");if(!s)return;s.classList.add("sp-hidden");s.dataset.spk=key;
+ s.insertAdjacentHTML("beforebegin",`<div class="sp-note" data-sp-for="${key}"><span>This ${what} draws relationships from <b>every book</b>, so it will spoil who ends up with whom.</span><button class="chip" type="button" data-reveal="${key}">Show it anyway</button></div>`)}
+
+/* ============ AFFILIATE SETTINGS ============
+   Paste your Amazon Associates tracking ID between the quotes (e.g. "readersatlas-22").
+   Every "Buy the book" link updates automatically. Leave blank until approved. */
+const AMAZON_TAG="";
+const affUrl=title=>"https://www.amazon.com.au/s?k="+encodeURIComponent("Elsie Silver "+title)+(AMAZON_TAG?"&tag="+encodeURIComponent(AMAZON_TAG):"");
+const affRel="noopener"+(AMAZON_TAG?" sponsored":"");
+const CART='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>';
+document.getElementById("readbooks").addEventListener("click",()=>{show("books");gq.blur()});
+
+/* ============ TABS ============ */
+const TABS=[["books","Book Guide"],["characters","Characters"],["world","Timeline & Towns"],["recaps","Recaps"],["family","Family Tree"],["map","Connections Map"]];
+const TSHORT={books:"Books",characters:"Cast",world:"Towns",recaps:"Recaps",family:"Family",map:"Map"};
+let current=store.get("silverTab","books");
+if(location.hash&&TABS.some(t=>t[0]===location.hash.slice(1)))current=location.hash.slice(1);
+if(!TABS.some(t=>t[0]===current))current="books";
+const TICON={
+ books:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/>',
+ characters:'<path d="M3 10.5c0-1 4-2 9-2s9 1 9 2"/><path d="M7 9V6.5C7 5 8.5 4 12 4s5 1 5 2.5V9"/><circle cx="12" cy="14" r="3"/><path d="M6 21c1-3 3.3-4.5 6-4.5s5 1.5 6 4.5"/>',
+ world:'<path d="M3 20l6-11 4 6 3-4 5 9z"/><circle cx="17" cy="6" r="2"/>',
+ recaps:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/>',
+ family:'<circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5V12M5 16.5V12h14v4.5"/>',
+ map:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8.5 6.2 15.5 7.6M6.6 8.4 8.4 15.6M16.6 10.1 10.6 16.2"/>'};
+function renderTabs(){$("#tabs").innerHTML=TABS.map(([k,l])=>`<button role="tab" aria-selected="${k===current}" data-tab="${k}" aria-label="${l}"><svg class="tabicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${TICON[k]}</svg><span class="tl-l">${l}</span><span class="ts">${TSHORT[k]}</span></button>`).join("")}
+let lastW=innerWidth;
+addEventListener("resize",()=>{clearTimeout(window._rz);window._rz=setTimeout(()=>{if(Math.abs(innerWidth-lastW)<40)return;lastW=innerWidth;if(current==="family")renderFamily();if(current==="map")renderMap()},250)});
+$("#tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b)show(b.dataset.tab)});
+function show(t,after){current=t;store.set("silverTab",t);renderTabs();({books:renderBooks,characters:renderChars,world:renderWorld,recaps:renderRecaps,family:renderFamily,map:renderMap})[t]();window.scrollTo({top:0});if(after)requestAnimationFrame(after)}
+function flash(el){if(!el)return;el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"center"});el.classList.add("flash");setTimeout(()=>el.classList.remove("flash"),2200)}
+
+document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(!b)return;go(b.dataset.go)});
+function go(ref){const i=ref.indexOf(":"),k=ref.slice(0,i),id=ref.slice(i+1);
+ if(k==="char"){Object.assign(charState,{q:"",role:"all",ser:"all",bk:"all"});show("characters",()=>flash(document.getElementById("c-"+id)))}
+ else if(k==="book"){show("books",()=>flash(document.getElementById("b-"+id)))}
+ else if(k==="world"){show("world",()=>{const el=document.getElementById(id);if(el&&el.dataset.pl)selectPlace(el.dataset.pl);flash(el)})}
+ else if(k==="recap"){recapBook=id;show("recaps")}
+ else if(k==="fam"){famFocus=id;show("family")}
+ else if(k==="map"){mapFocus=id;show("map")}}
+
+/* ============ BOOK GUIDE ============ */
+const ord=n=>n+(n%100>=11&&n%100<=13?"th":({1:"st",2:"nd",3:"rd"}[n%10]||"th"));
+function renderBooks(){
+ const v=$("#view");
+ let last="",order=[];
+ BOOKLIST.forEach((b,i)=>{order.push(`<li style="border-top:3px solid ${SERCOL[b.s]}"><span class="n">Read ${ord(i+1)} · ${esc(SERIES[b.s].name)} ${b.n}</span><b>${esc(b.title)}</b>${b.year}</li>`);
+  if(b.c==="OR")order.push(`<li class="opt"><span class="n">Optional · Gold Rush Ranch 1.5</span><b>Out of the Gate</b>A short bonus novella. Nice to have, not needed.</li>`)});
+ order.push(`<li class="soon"><span class="n">Coming next · Emerald Lake 2</span><b>${esc(UPCOMING.title)}</b>${UPCOMING.date}</li>`);
+ const groups=Object.keys(SERIES).filter(s=>BOOKLIST.some(b=>b.s===s));
+ v.innerHTML=`<p class="eyebrow">Start here</p><h2>Book Guide</h2>
+ <p class="lede">All four series share one world: the Eatons of Chestnut Springs are the hub, and characters cross between towns. Every book stands alone, but this order (publication order) gives you every cameo in the right sequence. Premises only here; full plots live in Recaps.</p>
+ <p class="note">Starting with Flawless? That's where most readers begin, and it works fine. You'll just meet Violet, Cole and the Gold Rush crew already paired up.</p>
+ <ol class="order">${order.join("")}</ol>
+ ${groups.map(s=>`<div class="group-h"><h3>${sw(s)}${esc(SERIES[s].name)}</h3><span>${esc(SERIES[s].town)}</span></div>
+ <div class="grid wide">${BOOKLIST.filter(b=>b.s===s).map(b=>{const key="bk-"+b.c;
+  const body=`<p class="eyebrow">${esc(SERIES[b.s].name)} ${b.n} · ${b.year}</p><h3>${esc(b.title)}</h3><p class="trope">${esc(b.trope)}</p><p class="bk-plot">${esc(b.plot)}</p><span class="lbl" style="margin-top:10px">Main characters</span><div class="castlist">${b.cast.map(charLink).join("")}</div>`;
+  return `<article class="card" id="b-${b.c}"><div class="bookcard"><div class="spine" style="background:${b.col}"><span>${esc(b.title.replace(/^(A|The) /,""))}</span></div><div>${sp(b.sp>=0&&hideField(b.sp),key,body,"div")}
+  <div class="bk-actions"><a class="buybtn" href="${affUrl(b.title)}" target="_blank" rel="${affRel}">${CART}Buy the book</a><button class="buybtn ghost" data-go="recap:${b.c}">Recap</button></div></div></div></article>`}).join("")}
+  ${s==="el"?`<article class="card" id="b-next"><div class="bookcard"><div class="spine" style="background:#7a8a99"><span>Midnight Rush</span></div><div><p class="eyebrow">Emerald Lake 2 · ${UPCOMING.date}</p><h3>${esc(UPCOMING.title)}</h3>${sp(hideItem(bi("FD")),"bk-next",`<p class="bk-plot">${esc(UPCOMING.note)}</p>`,"div")}<div class="bk-actions"><a class="buybtn" href="${affUrl(UPCOMING.title)}" target="_blank" rel="${affRel}">${CART}Pre-order</a></div></div></div></article>`:""}</div>`).join("")}`;
+}
+
+/* ============ CHARACTERS ============ */
+const charState=Object.assign({q:"",group:"series",role:"all",ser:"all",bk:"all"},store.get("silverChars",{}));
+/* which books each character appears in: book cast lists, first appearance, and connections tied to a book */
+const APPEARS={};
+const addAp=(id,b)=>{if(C[id]&&BIDX[b]!==undefined)(APPEARS[id]??=new Set).add(b)};
+BOOKLIST.forEach(b=>b.cast.forEach(id=>addAp(id,b.c)));
+CHARS.forEach(c=>String(c.books).split(" ").forEach(b=>addAp(c.id,b)));
+EDGES.forEach(([a,b,,,bk])=>{addAp(a,bk);addAp(b,bk)});
+const bookOpts=ser=>Object.keys(SERIES).filter(s=>(ser==="all"||ser===s)&&BOOKLIST.some(b=>b.s===s)).map(s=>`<optgroup label="${esc(SERIES[s].name)}">${BOOKLIST.filter(b=>b.s===s).map(b=>`<option value="${b.c}">${esc(b.title)}</option>`).join("")}</optgroup>`).join("");
+function charCard(c){
+ const f=firstBook(c.books),key="c-"+c.id;
+ const rv=Math.max(f,c.rev?bi(c.rev):f);
+ const featR=risk(c.feat,-1),jobR=risk(c.job,c.jobB?bi(c.jobB):-1),loveR=risk(c.love,c.loveB?bi(c.loveB):f),twR=risk(c.twist,c.twB?bi(c.twB):f),stR=risk(c.story,rv),ageR=risk(c.age,-1),akaR=risk(c.aka,-1);
+ const inner=`<div class="card-top"><div><h3>${esc(dispName(c))}</h3><div class="aka">${sp(hideField(akaR),key+"-ak",esc(c.aka))}</div></div><div class="pills">${sp(hideField(rv),key+"-al",alignPill(c.role))}${statusPill(c.status)}</div></div>
+ <dl class="kv">${PRON[c.id]?`<dt>Say it</dt><dd style="font-family:var(--mono);font-size:.85rem">${esc(PRON[c.id])}</dd>`:""}
+ <dt>Series</dt><dd>${sw(c.s)}<button class="lnk" data-go="world:town-${c.s}">${esc(serName(c.s))}</button></dd>
+ <dt>Job</dt><dd>${sp(hideField(jobR),key+"-jb",esc(c.job))}</dd>
+ <dt>Features</dt><dd>${sp(hideField(featR),key+"-ft",esc(c.feat))}</dd>
+ ${c.love?`<dt>Love interest</dt><dd>${sp(hideField(loveR),key+"-lv",esc(c.love))}</dd>`:""}
+ <dt>Age</dt><dd>${sp(hideField(ageR),key+"-ag",esc(c.age))}</dd></dl>
+ ${c.twist?`<div class="death"><b class="lbl">Big moment</b>${sp(hideField(twR),key+"-tw",esc(c.twist))}</div>`:""}
+ ${c.story?`<div class="agenda"><b>Later on</b>${sp(hideField(stR),key+"-st",esc(c.story))}</div>`:""}
+ <div class="links">${FAMILIES.some(fm=>fm.gens.flat().includes(c.id))?`<button class="lnk" data-go="fam:${c.id}">Family tree</button> · `:""}${EDGES.some(e=>e[0]===c.id||e[1]===c.id)?`<button class="lnk" data-go="map:${c.id}">Connections</button>`:""}</div>
+ <div class="books">First appears: ${esc(bookTag(c.books))}</div>`;
+ return `<article class="card" id="${key}">${hideItem(f)?sp(true,key,inner,"div"):inner}</article>`}
+function renderChars(){
+ const v=$("#view");
+ v.innerHTML=`<p class="eyebrow">Who's who across the four towns</p><h2>Characters</h2>
+ <p class="lede">Everyone who matters, with how to say their name, what they do, looks and personality, love interest and rough age. Ages are approximate unless a book states them. Pronunciations are common readings, not official ones.</p>
+ <div class="controls"><input type="search" id="cq" placeholder="Search names, jobs, partners…" value="${esc(charState.q)}" aria-label="Search characters">
+ <select id="cs" aria-label="Filter by series"><option value="all">All series</option>${["grr","cs","rh","el"].map(k=>`<option value="${k}">${esc(serName(k))}</option>`).join("")}</select>
+ <select id="cb" aria-label="Filter by book"><option value="all">All books</option></select>
+ ${["all","lead","sup","bad"].map(a=>`<button class="chip" data-al="${a}" aria-pressed="${charState.role===a}">${{all:"All",lead:"Main",sup:"Supporting",bad:"Antagonists"}[a]}</button>`).join("")}<span class="count" id="ccount"></span></div><div id="clist"></div>`;
+ charState.group="series";$("#cs").value=charState.ser;
+ const fillBooks=()=>{if(charState.bk!=="all"&&charState.ser!=="all"&&BOOKLIST[bi(charState.bk)].s!==charState.ser)charState.bk="all";$("#cb").innerHTML=`<option value="all">${charState.ser==="all"?"All books":"All "+esc(serName(charState.ser))+" books"}</option>`+bookOpts(charState.ser);$("#cb").value=charState.bk};
+ fillBooks();
+ const draw=()=>{store.set("silverChars",{group:charState.group,ser:charState.ser,bk:charState.bk});
+  const q=charState.q.trim().toLowerCase();
+  const revealed=c=>!c.rev||!hideField(bi(c.rev));
+  let list=CHARS.filter(c=>(charState.ser==="all"||charState.bk!=="all"||c.s===charState.ser||([...(APPEARS[c.id]||[])].some(b=>BOOKLIST[bi(b)].s===charState.ser)))&&(charState.bk==="all"||APPEARS[c.id]?.has(charState.bk))&&(charState.role==="all"||(c.role===charState.role&&(!c.rev||revealed(c))))&&(!q||[dispName(c),c.aka,c.job,c.feat,c.love,serName(c.s)].join(" ").toLowerCase().includes(q)));
+  $("#ccount").textContent=`${list.length} of ${CHARS.length}`;
+  if(!list.length){$("#clist").innerHTML=`<p class="empty">No one matches that.</p>`;return}
+  const g=charState.group;
+  if(g==="none"){$("#clist").innerHTML=`<div class="grid">${list.map(charCard).join("")}</div>`;return}
+  const keyOf=c=>g==="series"?c.s:(c.rev&&!revealed(c)?"unknown":c.role);
+  const orderK=g==="series"?["grr","cs","rh","el"]:["lead","sup","bad","unknown"];
+  const label=k=>g==="series"?`${sw(k)}${esc(serName(k))} <span style="font-family:var(--body);font-size:.9rem;color:var(--muted)">· ${esc(SERIES[k].town)}</span>`:({lead:"Main characters",sup:"Supporting & family",bad:"Antagonists",unknown:"Not revealed yet"})[k];
+  $("#clist").innerHTML=orderK.map(k=>{const xs=list.filter(c=>keyOf(c)===k);return xs.length?`<div class="group-h"><h3>${label(k)}</h3><span>${xs.length}</span></div><div class="grid">${xs.map(charCard).join("")}</div>`:""}).join("")};
+ draw();
+ $("#cq").addEventListener("input",e=>{charState.q=e.target.value;draw()});
+ $("#cs").addEventListener("change",e=>{charState.ser=e.target.value;fillBooks();draw()});
+ $("#cb").addEventListener("change",e=>{charState.bk=e.target.value;if(charState.bk!=="all")charState.ser=BOOKLIST[bi(charState.bk)].s,$("#cs").value=charState.ser,fillBooks();draw()});
+ v.querySelectorAll("[data-al]").forEach(b=>b.addEventListener("click",()=>{charState.role=b.dataset.al;v.querySelectorAll("[data-al]").forEach(x=>x.setAttribute("aria-pressed",x===b));draw()}));
+}
+
+/* ============ TIMELINE & TOWNS ============ */
+let placeSel=null;
+function selectPlace(id){placeSel=id;document.querySelectorAll("[data-pl]").forEach(n=>n.classList.toggle("on",n.dataset.pl===id))}
+function renderWorld(){
+ const v=$("#view");
+ const towns=TOWNS.map(t=>{const f=bi(t.b);
+  const lm=t.places.map(([n,d,b,flag],i)=>{const r=bi(b),hid=hideItem(r)||(flag&&hideField(r));return`<li><b>${esc(n)}</b>${sp(hid,t.id+"-p"+i,` <span style="color:var(--muted)">${esc(d)}</span>`)}</li>`}).join("");
+  const series=BOOKLIST.filter(b=>b.s===t.s).map(b=>`<button class="lnk" data-go="book:${b.c}">${esc(b.title)}</button>`).join(" · ");
+  return `<article class="card town" id="${t.id}" style="border-top:4px solid ${SERCOL[t.s]}"><p class="eyebrow">${esc(SERIES[t.s].name)} series</p><h3>${esc(t.name)}</h3><div class="aka">Hub: ${esc(t.hub)}</div>
+  <p style="margin:8px 0 0;font-size:.95rem">${esc(t.d)}</p><span class="lbl" style="margin-top:12px">Places to know</span><ul class="lm">${lm}</ul><div class="books">Books: ${series}</div></article>`}).join("");
+ const tl=TIMELINE.map(([w,t,d,b,isB],i)=>{const r=bi(b),hid=isB?hideItem(r):hideField(r)||hideField(later(d));return`<li id="tl-${i}" class="${isB?"bk":""}"><div class="when">${esc(w)}</div>${sp(hid,"tl-"+i,`<b>${esc(t)}</b><p>${esc(d)}</p>`,"div")}</li>`}).join("");
+ const pins=PLACES.map((p,i)=>`<g class="pin" data-pl="${p.id}" tabindex="0" role="button" aria-label="${esc(p.name)}"><circle cx="${p.x}" cy="${p.y}" r="8"/><text x="${p.x}" y="${p.y+3.5}" text-anchor="middle" style="font-family:var(--mono);font-size:9px;fill:#fff">${i+1}</text><text x="${p.x+12}" y="${p.y-9}" style="font-size:12px">${esc(p.name)}</text></g>`).join("");
+ v.innerHTML=`<p class="eyebrow">Where and when</p><h2>Timeline &amp; Towns</h2>
+ <p class="lede">The four towns, what's in each one, a rough timeline of the whole universe, and a map of where everything sits in Western Canada.</p>
+ <h3 class="sec-h">The four towns</h3><div class="grid wide">${towns}</div>
+ <h3 class="sec-h">Timeline</h3>
+ <p class="note">Filled dots are books, in reading order. The series overlap in time, so the in-world order is approximate.</p>
+ <ol class="tl">${tl}</ol>
+ <h3 class="sec-h">The map</h3>
+ <p class="note">Fan-made schematic, not to scale. Vancouver and Calgary are real; the towns are fictional and placed by the clues in the books. Tap a pin.</p>
+ <div class="mapwrap"><div class="mapsvg"><svg viewBox="0 0 680 460" role="img" aria-label="Schematic map of British Columbia and Alberta with the four towns">
+  <rect class="sea" width="680" height="460"/>
+  <text x="30" y="250" class="sm">Pacific Ocean</text>
+  <path class="land" d="M70 40 L400 40 L400 120 L478 250 L478 440 L60 440 L84 400 L66 372 L88 350 L60 300 L92 260 L70 220 L100 170 L74 120 L104 80 Z" style="fill:${SERCOL.grr}22"/>
+  <path class="land" d="M400 40 L640 40 L640 440 L478 440 L478 250 L400 120 Z" style="fill:${SERCOL.cs}22"/>
+  <path d="M400 70 L420 110 L436 130 L450 170 L462 200 L474 240 L478 300" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <text x="250" y="120" text-anchor="middle" style="font-family:var(--display);font-size:16px;fill:var(--muted)">British Columbia</text>
+  <text x="560" y="120" text-anchor="middle" style="font-family:var(--display);font-size:16px;fill:var(--muted)">Alberta</text>
+  <text x="432" y="180" class="sm" transform="rotate(62 432 180)">Rocky Mountains</text>
+  <path d="M96 372 C200 360 280 330 330 318 S400 270 420 252 S500 262 548 268" fill="none" stroke="var(--bronze)" stroke-width="2" stroke-dasharray="6 5" opacity=".7"/>
+  ${pins}
+  <text x="636" y="452" text-anchor="end" class="sm">Las Vegas (finals) is far to the south</text>
+ </svg></div>
+ <div class="places">${PLACES.map((p,i)=>`<button class="place" id="${p.id}" data-pl="${p.id}"><span class="n">${i+1}</span><b>${esc(p.name)}</b><br><span style="color:var(--muted)">${esc(p.d)}</span></button>`).join("")}</div></div>`;
+ v.querySelectorAll("[data-pl]").forEach(n=>{n.addEventListener("click",()=>{selectPlace(n.dataset.pl);if(n.tagName!=="BUTTON")flash(document.getElementById(n.dataset.pl))});
+  n.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();n.dispatchEvent(new Event("click"))}})});
+ if(placeSel)selectPlace(placeSel);
+}
+
+/* ============ RECAPS ============ */
+let recapBook=store.get("silverRecap","OR");
+function renderRecaps(){
+ const v=$("#view");store.set("silverRecap",recapBook);
+ const b=BOOKLIST.find(x=>x.c===recapBook)||BOOKLIST[0],r=RECAPS[b.c],idx=bi(b.c),key="rc-"+b.c;
+ const body=`<p class="eyebrow">${esc(SERIES[b.s].name)} ${b.n} · ${b.year}</p><h3>${esc(b.title)}</h3>
+  <h4>Where it starts</h4><p>${esc(r.start)}</p>
+  <h4>What happens</h4><ul>${r.events.map(e=>`<li>${esc(e)}</li>`).join("")}</ul>
+  <h4>How it ends</h4><p>${esc(r.end)}</p>
+  <div class="remember"><h4>Remember this going into the next book</h4><ul>${r.remember.map(e=>`<li>${esc(e)}</li>`).join("")}</ul></div>`;
+ const hid=hideField(idx);
+ const chips=Object.keys(SERIES).filter(s=>BOOKLIST.some(x=>x.s===s)).map(s=>`<div class="rc-row"><span class="rc-s">${sw(s)}${esc(SERIES[s].name)}</span>${BOOKLIST.filter(x=>x.s===s).map(x=>`<button class="chip" data-rb="${x.c}" aria-pressed="${x.c===b.c}">${esc(x.title.replace(/^(A|The) /,""))}</button>`).join("")}</div>`).join("");
+ v.innerHTML=`<p class="eyebrow">Previously, in Chestnut Springs…</p><h2>Book Recaps</h2>
+ <p class="lede">Full-spoiler summaries for when the next release is a year away and you've forgotten everything. Pick the book you just finished.</p>
+ <div class="rc-chips">${chips}</div>
+ ${hid&&!SPK.has(key)?`<div class="sp-note" data-sp-for="${key}"><span>This recap spoils <b>all of ${esc(b.title)}</b>, which you haven't finished.</span><button class="chip" type="button" data-reveal="${key}">Show it anyway</button></div>`:""}
+ <article class="card recap">${sp(hid,key,body,"div")}</article>
+ <p class="links">${idx>0?`<button class="lnk" data-rb="${BOOKLIST[idx-1].c}">← ${esc(BOOKLIST[idx-1].title)}</button>`:""}${idx<BOOKLIST.length-1?` &nbsp; <button class="lnk" data-rb="${BOOKLIST[idx+1].c}">${esc(BOOKLIST[idx+1].title)} →</button>`:""} · <a class="lnk" href="${affUrl(b.title)}" target="_blank" rel="${affRel}">Buy ${esc(b.title)}</a></p>`;
+ v.querySelectorAll("[data-rb]").forEach(x=>x.addEventListener("click",()=>{recapBook=x.dataset.rb;renderRecaps();window.scrollTo({top:0})}));
+}
+
+/* ============ FAMILY TREE ============ */
+let famFocus=null;
+function famInfo(id){const c=C[id];if(c)return{name:dispName(c),sub:c.aka,dead:c.status==="dead",role:c.role};const x=FAMX[id];return{name:x?.name||id,sub:x?.note||"",dead:!!x?.dead}}
+function renderFamily(){
+ const v=$("#view");
+ v.innerHTML=`<p class="eyebrow">Bloodlines &amp; bonds</p><h2>Family Tree</h2>
+ <p class="lede">Tap anyone to focus their family: relatives light up and everyone else fades. Tap again, or pick a name in the panel, to switch. Links to other trees (Willa's brother in Rose Hill, Summer's sister) show in the panel.</p>
+ <div class="controls"><select id="fpick" aria-label="Jump to a family"><option value="">Jump to a family…</option>${FAMILIES.map((f,i)=>`<option value="${i}">${esc(f.name)}</option>`).join("")}</select></div>
+ <div class="legend"><span><i style="background:var(--fam)"></i>Parent / child</span><span><i style="background:var(--love)"></i>Partner or spouse</span><span><i style="background:var(--ally);opacity:.8"></i>Siblings</span></div>
+ <div class="split"><div class="stage" id="fstage"></div><aside class="panel" id="fpanel"></aside></div>`;
+ const cw=$("#fstage").clientWidth||760,narrow=cw<700;
+ const colGap=narrow?118:150,boxW=narrow?110:136,boxH=46;
+ const maxGen=Math.max(...FAMILIES.flatMap(f=>f.gens.map(g=>g.length)));
+ const W=Math.max(narrow?cw:760,maxGen*colGap+32);
+ const nameFit=id=>{const n=famInfo(id).name.replace(/^Dr\. /,"").replace(/ \(.*\)/,"");return n.length*7.2>boxW-8?n.split(" ")[0]:n};
+ const subMax=Math.floor(boxW/6.1);
+ let y=20,parts=[],nodes={},edges=[],famY=[];
+ FAMILIES.forEach((f,fi)=>{famY[fi]=y;
+  parts.push(`<text x="16" y="${y+14}" style="font-family:var(--display);font-size:16px;fill:var(--bronze)">${esc(f.name)}</text>`);y+=30;
+  f.gens.forEach(gen=>{const total=gen.length*colGap;const x0=Math.max(16,(W-total)/2);
+   gen.forEach((id,i)=>{nodes[id]={x:x0+i*colGap+(colGap-boxW)/2,y,fam:f.name}});y+=boxH+40});
+  (f.links||[]).forEach(l=>edges.push([...l,"fam"]));(f.spouse||[]).forEach(l=>edges.push([...l,"love"]));
+  (f.sib||[]).forEach(l=>edges.push([...l,"ally"]));y+=10});
+ CROSS.forEach(e=>edges.push(e));
+ const H=y;
+ const adj={};edges.forEach(([a,b])=>{(adj[a]??=new Set).add(b);(adj[b]??=new Set).add(a)});
+ const parents={};edges.filter(e=>e[2]==="fam"&&!e[3]).forEach(([p,c])=>(parents[c]??=[]).push(p));
+ Object.keys(parents).forEach(c=>Object.keys(parents).forEach(d=>{if(c!==d&&parents[c].some(p=>parents[d].includes(p)))adj[c].add(d)}));
+ const path=(a,b,t,x)=>{const A=nodes[a],B=nodes[b];if(!A||!B||x||A.fam!==B.fam)return"";
+  const ax=A.x+boxW/2,bx=B.x+boxW/2;
+  if(t==="fam")return`M${ax},${A.y+boxH} C${ax},${A.y+boxH+22} ${bx},${B.y-22} ${bx},${B.y}`;
+  const [L,R]=A.x<B.x?[A,B]:[B,A];
+  if(Math.abs(L.y-R.y)<2&&R.x-L.x>colGap+1)return`M${L.x+boxW/2},${L.y} C${L.x+boxW/2},${L.y-22} ${R.x+boxW/2},${R.y-22} ${R.x+boxW/2},${R.y}`;
+  return`M${L.x+boxW},${L.y+boxH/2} L${R.x},${R.y+boxH/2}`};
+ const edgeSvg=edges.map(([a,b,t,x])=>{const d=path(a,b,t,x);return d?`<path class="edge" data-a="${a}" data-b="${b}" d="${d}" stroke="var(--${t})" ${t!=="fam"?'stroke-dasharray="5 4"':""}/>`:""}).join("");
+ const nodeSvg=Object.entries(nodes).map(([id,n])=>{const i=famInfo(id);return`<g class="node ${i.dead?"dead":""}" data-id="${id}" tabindex="0" role="button" aria-label="${esc(i.name)}" transform="translate(${n.x},${n.y})"><rect width="${boxW}" height="${boxH}" rx="5"/><text x="${boxW/2}" y="19" text-anchor="middle" style="font-weight:700;font-size:13px">${esc(nameFit(id))}</text><text x="${boxW/2}" y="35" text-anchor="middle" style="font-size:11px;fill:var(--muted)">${esc(((i.dead?"† ":"")+i.sub).slice(0,subMax))}</text></g>`}).join("");
+ $("#fstage").innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Family trees">${parts.join("")}${edgeSvg}${nodeSvg}</svg>`;
+ const panel=$("#fpanel");
+ const label=(id,o,t,x,a)=>Array.isArray(x)?(a===id?x[0]:x[1]):x||(t==="love"?"Partner / spouse":t==="ally"?"Sibling":(a===id?"Child":"Parent"));
+ function focus(id){famFocus=id;
+  const svg=$("#fstage svg");svg.querySelectorAll(".node").forEach(g=>{const k=g.dataset.id;g.classList.toggle("focus",k===id);g.classList.toggle("near",!!id&&!!adj[id]?.has(k));g.classList.toggle("dim",!!id&&k!==id&&!adj[id]?.has(k))});
+  svg.querySelectorAll(".edge").forEach(e=>e.classList.toggle("dim",!!id&&e.dataset.a!==id&&e.dataset.b!==id));
+  panel.classList.toggle("idle",!id);
+  if(!id){panel.innerHTML=`<p class="eyebrow">No one selected</p><p style="margin:6px 0 0;color:var(--muted)">Pick a name in the tree to see their parents, children, siblings and partners.</p>`;return}
+  const i=famInfo(id),c=C[id];
+  const seen=new Set();
+  const rel=edges.filter(e=>e[0]===id||e[1]===id).map(([a,b,t,x])=>{const o=a===id?b:a;seen.add(o);return`<li><span class="eyebrow" style="display:inline-block;min-width:110px">${esc(label(id,o,t,x,a))}</span>${nodes[o]?`<button class="lnk" data-ff="${o}">${esc(nm(o))}</button>`:C[o]?charLink(o):esc(nm(o))}</li>`});
+  const sibs=[...(adj[id]||[])].filter(o=>!seen.has(o)&&parents[id]&&parents[o]&&parents[id].some(p=>parents[o].includes(p))).map(o=>`<li><span class="eyebrow" style="display:inline-block;min-width:110px">Sibling</span><button class="lnk" data-ff="${o}">${esc(nm(o))}</button></li>`);
+  panel.innerHTML=`<button class="sheet-close" data-close>Close</button><p class="eyebrow">Focused</p><h3>${esc(i.name)}</h3>${c?`<div class="pills" style="justify-content:flex-start;margin-top:6px">${alignPill(c.role)}${statusPill(c.status)}</div>`:""}<p style="margin:8px 0 0;color:var(--muted);font-size:.92rem">${esc(c?c.conn:i.sub)}</p><ul>${rel.join("")}${sibs.join("")}</ul>${c?`<p style="margin-top:12px"><button class="lnk" data-go="char:${id}">Full profile</button> · <button class="lnk" data-go="map:${id}">Connections map</button></p>`:""}`}
+ const centre=id=>$(`#fstage .node[data-id="${id}"]`)?.scrollIntoView({block:"center",inline:"center",behavior:"smooth"});
+ $("#fstage").addEventListener("click",e=>{const g=e.target.closest(".node");focus(g&&g.dataset.id!==famFocus?g.dataset.id:null)});
+ $("#fstage").addEventListener("keydown",e=>{const g=e.target.closest(".node");if(g&&(e.key==="Enter"||e.key===" ")){e.preventDefault();focus(g.dataset.id===famFocus?null:g.dataset.id)}});
+ panel.addEventListener("click",e=>{if(e.target.closest("[data-close]"))return focus(null);const b=e.target.closest("[data-ff]");if(b){focus(b.dataset.ff);centre(b.dataset.ff)}});
+ $("#fpick").addEventListener("change",e=>{if(e.target.value==="")return;const fi=+e.target.value;const first=FAMILIES[fi].gens[0][0];focus(first);$("#fstage").scrollTo({top:famY[fi]-6,behavior:"smooth"});e.target.value=""});
+ const start=famFocus&&nodes[famFocus]?famFocus:(narrow?null:"harvey");
+ focus(start);
+ if(start)requestAnimationFrame(()=>centre(start));
+ coverStage("cover-family","family tree");
+}
+
+/* ============ CONNECTIONS MAP ============ */
+let mapFocus=null;
+const mapState={series:"all"};
+const HUB="violet";
+function layout(nodes,links,W,H,narrow){
+ const REP=narrow?2600:5600,LEN=narrow?80:115,PADX=narrow?44:62;
+ const P={};nodes.forEach((n,i)=>{const a=i/nodes.length*Math.PI*2;P[n]={x:W/2+Math.cos(a)*W*.35,y:H/2+Math.sin(a)*H*.35,vx:0,vy:0}});
+ if(P[HUB]){P[HUB].x=W/2;P[HUB].y=H/2}
+ for(let it=0;it<420;it++){const t=1-it/420;
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const a=P[nodes[i]],b=P[nodes[j]];let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+.01,d=Math.sqrt(d2),f=REP/d2;a.vx+=dx/d*f;a.vy+=dy/d*f;b.vx-=dx/d*f;b.vy-=dy/d*f}
+  links.forEach(([s,tg])=>{const a=P[s],b=P[tg];if(!a||!b)return;let dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)+.01,f=(d-LEN)*.02;a.vx+=dx/d*f;a.vy+=dy/d*f;b.vx-=dx/d*f;b.vy-=dy/d*f});
+  nodes.forEach(n=>{const p=P[n];p.vx+=(W/2-p.x)*.004;p.vy+=(H/2-p.y)*.004;p.x+=p.vx*t*.5;p.y+=p.vy*t*.5;p.vx*=.6;p.vy*=.6;p.x=Math.max(PADX,Math.min(W-PADX,p.x));p.y=Math.max(30,Math.min(H-30,p.y))})}
+ return P}
+function renderMap(){
+ const v=$("#view");
+ v.innerHTML=`<p class="eyebrow">Who is tied to whom</p><h2>Connections Map</h2>
+ <p class="lede">Every family tie, romance, friendship and feud across all four series. Tap a person to light up their links. The crossovers between towns are listed below the map.</p>
+ <div class="controls"><select id="mpick" aria-label="Focus a character"><option value="">Focus a character…</option>${CHARS.filter(c=>EDGES.some(e=>e[0]===c.id||e[1]===c.id)).sort((a,b)=>nm(a.id).localeCompare(nm(b.id))).map(c=>`<option value="${c.id}">${esc(nm(c.id))}</option>`).join("")}</select>
+ <select id="mser" aria-label="Filter by series"><option value="all">All series</option>${["grr","cs","rh","el"].map(k=>`<option value="${k}">${esc(serName(k))} and their ties</option>`).join("")}</select></div>
+ <div class="legend"><span><i style="background:var(--fam)"></i>Family</span><span><i style="background:var(--love)"></i>Couples</span><span><i style="background:var(--friend)"></i>Friends</span><span><i style="background:var(--ally)"></i>Allies &amp; work</span><span><i style="background:var(--foe)"></i>Rivals &amp; enemies</span></div>
+ <div class="split"><div class="stage" id="mstage"></div><aside class="panel" id="mpanel"></aside></div>
+ <h3 class="sec-h">How the series connect</h3>
+ <div class="xover">${XOVER.map((x,i)=>`<div class="era" id="xo-${i}" style="border-left-color:${SERCOL[x.a]}"><div class="when">${esc(serName(x.a))} ↔ ${esc(serName(x.b))}</div><h3>${esc(x.t)}</h3>${sp(hideField(risk(x.d,bi(x.bk))),"xo-"+i,`<p style="margin:2px 0 0;color:var(--muted)">${esc(x.d)}</p>`,"div")}</div>`).join("")}</div>`;
+ $("#mser").value=mapState.series;
+ const cw=$("#mstage").clientWidth||980,narrow=cw<700;
+ let links=EDGES.map(e=>[...e]);
+ if(mapState.series!=="all"){const inS=id=>C[id]?.s===mapState.series;links=links.filter(e=>inS(e[0])||inS(e[1]))}
+ const nodes=[...new Set(links.flatMap(e=>[e[0],e[1]]))];
+ const W=narrow?Math.max(cw,560):Math.max(cw,1040),H=narrow?Math.round(nodes.length*22+260):Math.max(600,Math.round(nodes.length*13+240));
+ const P=layout(nodes,links,W,H,narrow);
+ const adj={};links.forEach(([a,b])=>{(adj[a]??=new Set).add(b);(adj[b]??=new Set).add(a)});
+ const edgeSvg=links.map(([a,b,t])=>`<line class="edge" data-a="${a}" data-b="${b}" x1="${P[a].x}" y1="${P[a].y}" x2="${P[b].x}" y2="${P[b].y}" stroke="var(--${t})" ${t==="foe"?'stroke-dasharray="6 4"':""}/>`).join("");
+ const nodeSvg=nodes.map(id=>{const p=P[id],c=C[id],label=short(id);const w=Math.max(54,label.length*7.4+26);
+  return`<g class="node ${c?.status==="dead"?"dead":""}" data-id="${id}" tabindex="0" role="button" aria-label="${esc(nm(id))}" transform="translate(${p.x-w/2},${p.y-14})"><rect width="${w}" height="28" rx="14" style="stroke:var(--${c?.role==="bad"?"foe":"line"})"/><circle cx="12" cy="14" r="4.5" style="fill:${SERCOL[c?.s]||SERCOL.other};stroke:none"/><text x="${w/2+6}" y="18.5" text-anchor="middle" style="font-size:13px;font-weight:700">${c?.status==="dead"?"† ":""}${esc(label)}</text></g>`}).join("");
+ $("#mstage").innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Character connections">${edgeSvg}${nodeSvg}</svg>`;
+ const panel=$("#mpanel");
+ function focus(id){mapFocus=id;$("#mpick").value=C[id]?id:"";
+  const svg=$("#mstage svg");svg.querySelectorAll(".node").forEach(g=>{const k=g.dataset.id;g.classList.toggle("focus",k===id);g.classList.toggle("near",!!id&&!!adj[id]?.has(k));g.classList.toggle("dim",!!id&&k!==id&&!adj[id]?.has(k))});
+  svg.querySelectorAll(".edge").forEach(e=>e.classList.toggle("dim",!!id&&e.dataset.a!==id&&e.dataset.b!==id));
+  panel.classList.toggle("idle",!id);
+  if(!id){panel.innerHTML=`<p class="eyebrow">No one selected</p><p style="margin:6px 0 0;color:var(--muted)">Tap a name on the map, or choose one above.</p>`;return}
+  const rows=links.filter(e=>e[0]===id||e[1]===id).map(([a,b,t,l,bk])=>{const o=a===id?b:a;return`<li><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--${t});margin-right:8px"></i><button class="lnk" data-mf="${o}">${esc(nm(o))}</button> <span style="color:var(--muted)">· ${sp(hideField(bi(bk)),"e-"+a+b,esc(l))}</span></li>`});
+  const c=C[id];
+  panel.innerHTML=`<button class="sheet-close" data-close>Close</button><p class="eyebrow">${c?sw(c.s)+esc(serName(c.s)):"Focused"}</p><h3>${esc(nm(id))}</h3>${c?`<div class="pills" style="justify-content:flex-start;margin-top:6px">${alignPill(c.role)}${statusPill(c.status)}</div>`:""}<ul>${rows.join("")}</ul><p style="margin-top:12px">${c?`<button class="lnk" data-go="char:${id}">Full profile</button>${FAMILIES.some(fm=>fm.gens.flat().includes(id))?` · <button class="lnk" data-go="fam:${id}">Family tree</button>`:""}`:""}</p>`}
+ const center=id=>$(`#mstage .node[data-id="${id}"]`)?.scrollIntoView({block:"center",inline:"center",behavior:"smooth"});
+ $("#mstage").addEventListener("click",e=>{const g=e.target.closest(".node");focus(g&&g.dataset.id!==mapFocus?g.dataset.id:null)});
+ $("#mstage").addEventListener("keydown",e=>{const g=e.target.closest(".node");if(g&&(e.key==="Enter"||e.key===" ")){e.preventDefault();focus(g.dataset.id===mapFocus?null:g.dataset.id)}});
+ panel.addEventListener("click",e=>{if(e.target.closest("[data-close]"))return focus(null);const b=e.target.closest("[data-mf]");if(b){focus(b.dataset.mf);center(b.dataset.mf)}});
+ $("#mpick").addEventListener("change",e=>{const id=e.target.value;if(id&&!P[id]){mapState.series="all";mapFocus=id;return renderMap()}focus(id||null);if(id)center(id)});
+ $("#mser").addEventListener("change",e=>{mapState.series=e.target.value;renderMap()});
+ const start=mapFocus&&P[mapFocus]?mapFocus:(narrow?null:(P[HUB]?HUB:null));
+ focus(start);if(start)requestAnimationFrame(()=>center(start));
+ coverStage("cover-map","map");
+}
+
+/* ============ GLOBAL SEARCH ============ */
+const INDEX=[
+ ...BOOKLIST.map(b=>({f:0,hf:b.sp,k:"Book",t:b.title,s:`${SERIES[b.s].name} ${b.n} · ${b.year}`,hay:[b.title,b.plot,b.trope,SERIES[b.s].name].join(" "),go:"book:"+b.c})),
+ ...BOOKLIST.map(b=>({f:bi(b.c),hf:bi(b.c),k:"Recap",t:b.title+" recap",s:"Full-spoiler summary",hay:[b.title,"recap summary",RECAPS[b.c].start,RECAPS[b.c].events.join(" "),RECAPS[b.c].end].join(" "),go:"recap:"+b.c})),
+ ...CHARS.map(c=>({f:firstBook(c.books),hf:Math.max(later(c.aka),later(c.job)),k:"Character",t:dispName(c),s:`${serName(c.s)} · ${c.aka}`,hay:[dispName(c),c.aka,c.job,c.feat,c.love,serName(c.s)].join(" "),go:"char:"+c.id})),
+ ...TOWNS.map(t=>({f:0,k:"Town",t:t.name,s:`${SERIES[t.s].name} · ${t.hub}`,hay:[t.name,t.hub,t.d,SERIES[t.s].name,t.places.map(p=>p[0]).join(" ")].join(" "),go:"world:"+t.id})),
+ ...TOWNS.flatMap(t=>t.places.map(([n,d,b,flag])=>({f:bi(b),hf:flag?bi(b):-1,k:"Place",t:n,s:t.name,hay:[n,d,t.name].join(" "),go:"world:"+t.id}))),
+ ...TIMELINE.map((x,i)=>({f:bi(x[3]),hf:x[4]?-1:bi(x[3]),k:"Timeline",t:x[1],s:x[0],hay:x.slice(0,3).join(" "),go:"world:tl-"+i})),
+ ...PLACES.map(p=>({f:0,k:"Map",t:p.name,s:"On the map",hay:[p.name,p.d].join(" "),go:"world:"+p.id}))
+];
+const gq=$("#gq"),gres=$("#gres");let gi=-1;
+function gsearch(){const q=gq.value.trim().toLowerCase();gi=-1;if(q.length<2){gres.hidden=true;return}
+ const terms=q.split(/\s+/);
+ const hits=INDEX.map(x=>{const h=x.hay.toLowerCase(),t=x.t.toLowerCase();if(!terms.every(w=>h.includes(w)))return null;return{...x,score:(t.startsWith(q)?3:0)+(t.includes(q)?2:0)+(x.k==="Character"?.5:0)}}).filter(Boolean).sort((a,b)=>b.score-a.score).slice(0,14);
+ gres.innerHTML=hits.length?hits.map(h=>{const hid=hideItem(h.f||0),shid=hid||hideField(h.hf??-1);return hid?`<button data-gg="${h.go}"><span class="k">Spoiler</span><span><b>Hidden spoiler</b><br><span class="s">From a book you haven't reached</span></span></button>`:`<button data-gg="${h.go}"><span class="k">${h.k}</span><span><b>${esc(h.t)}</b><br><span class="s" style="${shid?"filter:blur(5px)":""}">${esc(h.s)}</span></span></button>`}).join(""):`<div style="padding:12px;color:var(--muted)">Nothing found for “${esc(gq.value)}”.</div>`;
+ gres.hidden=false}
+gq.addEventListener("input",gsearch);gq.addEventListener("focus",gsearch);
+gq.addEventListener("keydown",e=>{const bs=[...gres.querySelectorAll("button")];if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(!bs.length)return;gi=(gi+(e.key==="ArrowDown"?1:-1)+bs.length)%bs.length;bs[gi]?.focus()}else if(e.key==="Enter"&&bs[0]){bs[0].click()}else if(e.key==="Escape"){gres.hidden=true}});
+gres.addEventListener("keydown",e=>{const bs=[...gres.querySelectorAll("button")];const i=bs.indexOf(document.activeElement);if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();bs[(i+(e.key==="ArrowDown"?1:-1)+bs.length)%bs.length]?.focus()}else if(e.key==="Escape"){gres.hidden=true;gq.focus()}});
+gres.addEventListener("click",e=>{const b=e.target.closest("[data-gg]");if(b){gres.hidden=true;gq.blur();go(b.dataset.gg)}});
+document.addEventListener("click",e=>{if(!e.target.closest(".gsearch"))gres.hidden=true});
+
+const totop=$("#totop");
+const syncTop=()=>{totop.hidden=scrollY<500};
+addEventListener("scroll",syncTop,{passive:true});syncTop();
+totop.addEventListener("click",()=>{scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});gq.blur()});
+
+spStrip();renderTabs();show(current);
+if(spLevel===null)openSp();
+
+</script>
+</body>
+</html>
