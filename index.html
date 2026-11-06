@@ -125,8 +125,15 @@ a.lnk,button.lnk{color:var(--accent);background:none;border:0;padding:0;font:inh
 .order li .n{font-family:var(--mono);font-size:.66rem;color:var(--bronze);letter-spacing:.08em;text-transform:uppercase}
 .order li.opt{border-style:dashed}
 .order li.soon{border-style:dashed;opacity:.85}
-.bookcard{display:grid;grid-template-columns:64px 1fr;gap:14px}
-.spine{border-radius:4px;min-height:96px;display:flex;align-items:flex-end;justify-content:center;padding:12px 0;font-family:var(--display);font-size:1rem;letter-spacing:.14em;color:#fff;line-height:1;box-shadow:inset -6px 0 0 rgba(0,0,0,.18)}
+.bookcard{display:grid;grid-template-columns:84px 1fr;gap:14px}
+.cover{position:relative;width:100%;aspect-ratio:2/3;max-width:100%;align-self:start;border-radius:4px;overflow:hidden;background:var(--sunk)}
+.cover .spine{position:absolute;inset:0;min-height:0;padding:8px 4px;font-size:.82rem;letter-spacing:.06em;align-items:center}
+.cover .spine span{white-space:normal;text-align:center;line-height:1.15;max-height:100%}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.cover.has-img img{opacity:1}
+.cover.has-img .spine{visibility:hidden}
+@media (prefers-reduced-motion:reduce){.cover img{transition:none}}
+.spine{border-radius:4px;min-height:96px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding:12px 0;font-family:var(--display);font-size:1rem;letter-spacing:.14em;color:#fff;line-height:1;box-shadow:inset -6px 0 0 rgba(0,0,0,.18)}
 .spine span{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
 .bk-plot{margin:8px 0 0;font-size:.95rem}
 .bk-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin-top:12px}
@@ -279,7 +286,7 @@ footer.site h2{font-size:1.3rem}
   .chip{min-height:40px}
   .controls select{flex:1 1 auto;min-height:40px}
   .count{width:100%;margin-left:0}
-  .bookcard{grid-template-columns:44px 1fr;gap:12px}
+  .bookcard{grid-template-columns:66px 1fr;gap:12px}
   .spine{min-height:80px;font-size:.85rem}
   .pos li{grid-template-columns:96px 1fr}
   .panel{position:fixed;left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px));z-index:22;max-height:42vh;overflow:auto;
@@ -942,6 +949,42 @@ function go(ref){const i=ref.indexOf(":"),k=ref.slice(0,i),id=ref.slice(i+1);
  else if(k==="fam"){famFocus=id;show("family")}
  else if(k==="map"){mapFocus=id;show("map")}}
 
+/* ============ COVERS ============
+   Cover images come from Open Library by ISBN. Each book lists editions in order of preference
+   (Australian/UK editions first, then US). If one edition has no cover, the next is tried;
+   if none load, the coloured spine underneath stays visible. */
+const ISBNS={
+ OR:["9781761429316","9781464220777"],
+ PF:["9781761429323"],
+ FR:["9781761429330"],
+ FS:["9781761429347"],
+ FL:["9780349437668","9780349437675","9781728297002","9781959285854"],
+ HE:["9780349437682","9780349437699","9781728297019"],
+ PO:["9780349437705","9781728297026","9781738844708"],
+ RE:["9780349437729","9781738844722","9781728297033"],
+ HO:["9780349437743","9781728297040"],
+ WL:["9780349441634","9781464220814"],
+ WE:["9780349441641","9781464220821"],
+ WS:["9780349441672","9781464237522"],
+ WC:["9780349441696","9780349441689"],
+ FD:["9781761635359","9780349446028","9781668099575"],
+ next:["9780349446035"]
+};
+const COVER_OK={},COVER_DEAD=new Set();
+const coverUrl=isbn=>`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg?default=false`;
+function coverHtml(code,title,col){
+ const list=ISBNS[code]||[],i=COVER_OK[code]??0;
+ const spine=`<div class="spine" style="background:${col}"><span>${esc(title.replace(/^(A|The) /,""))}</span></div>`;
+ const img=COVER_DEAD.has(code)||!list.length?"":`<img alt="Cover of ${esc(title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-cv="${code}" data-ci="${i}" src="${coverUrl(list[i])}">`;
+ return `<div class="cover${COVER_OK[code]!==undefined?" has-img":""}">${spine}${img}</div>`}
+document.addEventListener("load",e=>{const im=e.target;if(!im.dataset||!im.dataset.cv)return;
+ if(im.naturalWidth<10)return im.dispatchEvent(new Event("error"));
+ COVER_OK[im.dataset.cv]=+im.dataset.ci;im.parentNode.classList.add("has-img")},true);
+document.addEventListener("error",e=>{const im=e.target;if(!im.dataset||!im.dataset.cv)return;
+ const code=im.dataset.cv,next=+im.dataset.ci+1,list=ISBNS[code]||[];
+ if(next<list.length){im.dataset.ci=next;im.src=coverUrl(list[next])}
+ else{COVER_DEAD.add(code);im.parentNode.classList.remove("has-img");im.remove()}},true);
+
 /* ============ BOOK GUIDE ============ */
 const ord=n=>n+(n%100>=11&&n%100<=13?"th":({1:"st",2:"nd",3:"rd"}[n%10]||"th"));
 function renderBooks(){
@@ -958,9 +1001,9 @@ function renderBooks(){
  ${groups.map(s=>`<div class="group-h"><h3>${sw(s)}${esc(SERIES[s].name)}</h3><span>${esc(SERIES[s].town)}</span></div>
  <div class="grid wide">${BOOKLIST.filter(b=>b.s===s).map(b=>{const key="bk-"+b.c;
   const body=`<p class="eyebrow">${esc(SERIES[b.s].name)} ${b.n} · ${b.year}</p><h3>${esc(b.title)}</h3><p class="trope">${esc(b.trope)}</p><p class="bk-plot">${esc(b.plot)}</p><span class="lbl" style="margin-top:10px">Main characters</span><div class="castlist">${b.cast.map(charLink).join("")}</div>`;
-  return `<article class="card" id="b-${b.c}"><div class="bookcard"><div class="spine" style="background:${b.col}"><span>${esc(b.title.replace(/^(A|The) /,""))}</span></div><div>${sp(b.sp>=0&&hideField(b.sp),key,body,"div")}
+  return `<article class="card" id="b-${b.c}"><div class="bookcard">${coverHtml(b.c,b.title,b.col)}<div>${sp(b.sp>=0&&hideField(b.sp),key,body,"div")}
   <div class="bk-actions"><a class="buybtn" href="${affUrl(b.title)}" target="_blank" rel="${affRel}">${CART}Buy the book</a><button class="buybtn ghost" data-go="recap:${b.c}">Recap</button></div></div></div></article>`}).join("")}
-  ${s==="el"?`<article class="card" id="b-next"><div class="bookcard"><div class="spine" style="background:#7a8a99"><span>Midnight Rush</span></div><div><p class="eyebrow">Emerald Lake 2 · ${UPCOMING.date}</p><h3>${esc(UPCOMING.title)}</h3>${sp(hideItem(bi("FD")),"bk-next",`<p class="bk-plot">${esc(UPCOMING.note)}</p>`,"div")}<div class="bk-actions"><a class="buybtn" href="${affUrl(UPCOMING.title)}" target="_blank" rel="${affRel}">${CART}Pre-order</a></div></div></div></article>`:""}</div>`).join("")}`;
+  ${s==="el"?`<article class="card" id="b-next"><div class="bookcard">${coverHtml("next",UPCOMING.title,"#7a8a99")}<div><p class="eyebrow">Emerald Lake 2 · ${UPCOMING.date}</p><h3>${esc(UPCOMING.title)}</h3>${sp(hideItem(bi("FD")),"bk-next",`<p class="bk-plot">${esc(UPCOMING.note)}</p>`,"div")}<div class="bk-actions"><a class="buybtn" href="${affUrl(UPCOMING.title)}" target="_blank" rel="${affRel}">${CART}Pre-order</a></div></div></div></article>`:""}</div>`).join("")}`;
 }
 
 /* ============ CHARACTERS ============ */
